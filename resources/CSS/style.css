@@ -8,6 +8,9 @@
 *::-webkit-scrollbar {
     display: none;
 }
+h2{
+    margin: 1rem 0;
+}
 body{
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -26,7 +29,7 @@ header{
     transition: all 0.5s ease;
 }
 header:hover{
-    background-color: white;
+    background-color: rgb(39, 39, 39);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 .navbar{
@@ -36,13 +39,16 @@ header:hover{
 .navbar li{
     margin: 0 1rem;
 }
+.navbar a{
+    color: white;
+}
 .navbar li::after {
     content: '';
     display: block;
     margin: auto;
     height: 1px;
     width: 0px;
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     transition: all 0.1s linear;
   }
 .navbar li:hover::after {
@@ -120,7 +126,7 @@ width: 100%;
     width: 100vw;
 }
 .one{
-    background: url("../images/IMG1.jpg");
+    background: url("../images/zalazak2.jpg");
     background-size: cover;
     background-position: bottom;
 }
@@ -144,34 +150,35 @@ width: 100%;
     font-size: 2rem;
     opacity: 0;
     color: rgb(255, 255, 255);
+    margin: 0;
 }
 .ivan{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 1s forwards 7s, floating 20s alternate 18s infinite;
+    animation: slide-in 1s forwards 7s/*, floating 20s alternate 18s infinite*/;
 }
 .miljak{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 1s forwards 6s, floating 22s alternate 18s infinite;
+    animation: slide-in 1s forwards 6s/*, floating 22s alternate 18s infinite*/;
 }
 .lifestyle{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 2s forwards 10s, floating 20s alternate  18s infinite;
+    animation: slide-in 2s forwards 10s/*, floating 20s alternate  18s infinite*/;
 }
 .hotel{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 2s forwards 8s, floating 19s alternate  18s infinite;
+    animation: slide-in 2s forwards 8s/*, floating 19s alternate  18s infinite*/;
 }
 .food{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 3s forwards 9s, floating 21s alternate  18s infinite;
+    animation: slide-in 3s forwards 9s/*, floating 21s alternate  18s infinite*/;
 }
 .experience{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 4s forwards 10.5s, floating 20s alternate-reverse 18s infinite;
+    animation: slide-in 3s forwards 9.5s/*, floating 20s alternate-reverse 18s infinite*/;
 }
 .photography{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 1s forwards 6s, floating 22s alternate-reverse 18s infinite;
+    animation: slide-in 1s forwards 6s/*, floating 22s alternate-reverse 18s infinite*/;
     font-size: 3rem;
 }
     /* floating text */
@@ -195,6 +202,9 @@ width: 100%;
 }
 .disable{
     display: none;
+}
+.white{
+    color: white;
 }
 .slogan{
     width: 100%;

@@ -14,6 +14,10 @@ window.addEventListener('load',()=>{
         whiteout.classList.add('hide');
     }, 4500);
     setTimeout(() => {
+        first.classList.add('white');
+        second.classList.add('white');
+    }, 4500);
+    setTimeout(() => {
         whiteout.classList.add('disable');
     }, 7000);
 })
