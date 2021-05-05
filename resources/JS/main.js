@@ -19,15 +19,43 @@ window.addEventListener('load',()=>{
     }, 4500);
     setTimeout(() => {
         whiteout.classList.add('disable');
-    }, 7000);
+    }, 10000);
 })
 //
 
 //main image carousell
 const one = document.querySelector('.one');
-for(let i=0; i<5; i++){
-    setTimeout(() => {
-       // one.style.background = "url('../images/dorucak.jpg')";
-        i+=1;
-    }, 5000);
-}
+let i=0;
+setTimeout(() => {
+   setInterval(() => {
+    i+=1;
+    console.log(i);
+    if(i===5){
+        i=0;
+    }
+    switch (i) {
+        case 1: 
+            one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover";
+            break;
+        case 2: 
+            one.style.background = "url('resources/images/dorucak.jpg') bottom/cover";
+            break;
+        case 3: 
+            one.style.background = "url('resources/images/wellness2.jpg') bottom/cover";
+            break;
+        case 4: 
+            one.style.background = "url('resources/images/terasa.jpg') bottom/cover";
+            break;
+        case 5: 
+            one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover";
+            break;
+        default:
+            break;
+    }
+}, 5000); 
+}, 6000);
+
+        
+   
+
+    

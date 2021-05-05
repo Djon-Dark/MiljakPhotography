@@ -10,6 +10,7 @@
 }
 h2{
     margin: 1rem 0;
+    font-weight: 400;
 }
 body{
     box-sizing: border-box;
@@ -50,7 +51,7 @@ header:hover{
     width: 0px;
     background: rgb(255, 255, 255);
     transition: all 0.1s linear;
-  }
+}
 .navbar li:hover::after {
 width: 100%;
 }
@@ -69,48 +70,22 @@ width: 100%;
         opacity: 1;
     }
 }
+/*
 @keyframes floating {
-    /*
-    0%{
-        transform: translate3d(15vw,0,0);
-    }
-    25%{
-        transform: translate3d(16vw,2vh,0);
-    }
-    75%{
-        transform: translate3d(14vw,1vh,0);
-    }
-    100%{
-        transform: translate3d(15vw,-1vh,0);
-    }
-
-    */
     0%{
         transform: translate3d(10vw, 0, 0);
     }
     10%{
         transform: translate3d(9vw, -1vh, 0);
     }
-    20%{
-        
-    }
     30%{
         transform: translate3d(11vw, 1vh, 0);
-    }
-    40%{
-        
     }
     50%{
         transform: translate3d(10vw, -1vh, 0);
     }
-    60%{
-        
-    }
     70%{
         transform: translate3d(10vw, 1vh, 0);
-    }
-    80%{
-  
     }
     90%{
         transform: translate3d(11vw, -1vh, 0);
@@ -118,17 +93,25 @@ width: 100%;
     100%{
         transform: translate3d(10vw, 0, 0);
     }
-    
 }
+*/
 /* floating text animation */
+@keyframes fadeSwitch {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 .section{
     height: 100vh;
     width: 100vw;
 }
 .one{
-    background: url("../images/zalazak2.jpg");
-    background-size: cover;
-    background-position: bottom;
+    background: url("../images/zalazak2.jpg") bottom/cover;
+    transition: all 1s ease;
+    
 }
     /* floating text */
 .floating-text{
@@ -268,6 +251,7 @@ width: 100%;
     border: 1px solid gray;
     border-radius: 1rem;
 }
+.photo
 /* SECTION THREE types of photos */
 /* SECTION FOUR help you */
 .four {
