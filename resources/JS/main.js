@@ -31,7 +31,7 @@ function preloader() {
 		var img3 = new Image();
 		var img4 = new Image();
 
-		img1.src = "resources/images/curanakrevetu.jpg";
+		img1.src = "resources/images/zalazak2.jpg";
 		img2.src = "resources/images/dorucak.jpg";
 		img3.src = "resources/images/wellness2.jpg";
 		img4.src = "resources/images/terasa.jpg";
@@ -71,7 +71,7 @@ setTimeout(() => {
             break;
     }
 }, 5000); 
-}, 6000);
+}, 3000);
 
         
    

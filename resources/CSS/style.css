@@ -12,6 +12,13 @@ h2{
     margin: 1rem 0;
     font-weight: 400;
 }
+h3{
+    margin: 1rem 0;
+    font-weight: 500;
+}
+.centered{
+    text-align: center;
+}
 body{
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -25,7 +32,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     background-color: rgba(0,0,0,0);
-    position: fixed;
+    position: absolute;
     top: 0;
     transition: all 0.5s ease;
 }
@@ -105,11 +112,12 @@ width: 100%;
     }
 }
 .section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    margin-bottom: 3rem;
 }
 .one{
-    background: url("../images/zalazak2.jpg") bottom/cover;
+    background: url("../images/curanakrevetu.jpg") bottom/cover;
     transition: all 1s ease; 
 }
     /* floating text */
@@ -175,8 +183,8 @@ width: 100%;
     position:absolute;
     top: 0;
     z-index: 3;
-    
-    background: linear-gradient(to right, white,white), url("../images/zalazak2.jpg") bottom/cover, url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg");
+    /* preload images for carousell */
+    background: linear-gradient(to right, white,white), url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover;
     transition: all 2s ease-in-out;
 }
 .hide{
@@ -219,10 +227,13 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .text{
-    width: 40%;
-    padding: 3rem;
+    min-width: 25rem;
+    max-width: 40rem;
+    padding-right: 3rem;
+    margin-bottom: 3rem;
 }
 .contact-form{
     width: 40%;
@@ -241,38 +252,42 @@ width: 100%;
 }
 .photo-type{
     width: 25%;
-    height: 30rem;
+    min-width: 20rem;
     min-width: 25rem;
 }
 .photo{
     height: 15rem;
     width: 100%;
-    border: 1px solid gray;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
 }
 .photo
 /* SECTION THREE types of photos */
 /* SECTION FOUR help you */
-.four {
+.four {/*+++++++++++++++++++++  OVO JE SJEBANO IZ NEKOG RAZLOGA +++++++++++++++++++++*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    background-color: red;
 }
 .four h2{
     margin: 2rem;
+    text-align: center;
 }
 .help{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .help-type{
     width: 25%;
-    min-width: 25rem;
+    min-width: 20rem;
+    margin: 2rem 0;
 }
 .help-type img{
     width: 100%;
+    
 }
 /* SECTION FOUR help you */
 /* SECTION FIVE references */
@@ -280,15 +295,23 @@ width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .reference{
     text-align: center;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reference-text{
+    margin: 2rem 0;
 }
 .reference img{
     width: 5rem;
     border-radius: 5rem;
+    margin: 1rem;
 }
 /* SECTION FIVE references */
 /* SECTION SIX mini blog */
@@ -297,6 +320,9 @@ width: 100%;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.mini-blog h2{
+    width: 100%;
 }
 .mini-post{
     width: 25%;
