@@ -116,6 +116,13 @@ width: 100%;
     width: 100vw;
     margin-bottom: 3rem;
 }
+.handlebar{
+    height: 3px;
+    width: 10vw;
+    background-color: rgb(39, 39, 39);
+    margin: 0 40vw;
+    border-radius: 3px;
+}
 .one{
     background: url("../images/curanakrevetu.jpg") bottom/cover;
     transition: all 1s ease; 
@@ -372,6 +379,6 @@ textarea{
 footer{
     width: 100%;
     height: 50vh;
-    background-color: darkgrey;
+    background-color: rgb(39, 39, 39);
 }
 /* FOOTER */
