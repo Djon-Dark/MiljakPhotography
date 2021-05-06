@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class='scroll-disabled'>
     <header>
         <ul class='navbar'>
             <li><a href="">usluge</a></li>
@@ -40,7 +40,6 @@
         </div>
     </div>
     <div class="section two about">
-        <div class="handlebar"></div>
         <div class="text">
             <h2 class="centered">IVAN MILJAK - Tata mata za slike</h2>
             <p>Danas je vise nego ikad bitno imati kvalitetne fotografije koje su najvažniji element kvalitetnog marketinga i prvi korak u privlačenju korisnika prilikom prodaje naših proizvoda ili usluga. Moj zadatak je kreiranje vrhunskih digitalnih fotografija visoke razlucivosti, koje vasu imovinu prikazuju na oku ugodan i realan nacin, koristenjem toplog, prirodnog svjetla kada god je to moguce. Ono sto zelim istaknuti kao svoju posebnu kvalitetu, jest posvecenost detaljima u svakoj fazi procesa: kadriranja same fotografije, kut pogleda, razmjestaj namjestaja i dekoracija, ravnina linija, digitalne obrade.</p>
@@ -56,30 +55,33 @@
                 <input type="text" id='email'>
                 <label for="message">Poruka:</label>
                 <textarea form='form-one' id='message' rows="5" cols="20"></textarea>
+                <button type='submit'>Pošalji</button>
             </form>
         </div>
     </div>
     <div class="section three">
-        <div class="handlebar"></div>
-        <div class="photo-type">
-            <div class="photo"><img class='photo' src="resources/images/curanakrevetu.jpg" alt=""></div>
-            <h2>Zivotni stil</h2>
-            <p>Usko specijaliziran za docaravanje svijeta hoteljerstva, ugostiteljstva i turizma. Zivim fotografijama prikazuje Vase vlasnistvo u najboljem izdanju</p>
-        </div>
-        <div class="photo-type">
-            <div class="photo"><img class='photo' src="resources/images/hrana.jpg" alt=""></div>
-            <h2>Hrana i pice</h2>
-            <p>Svojom kreativnoscu, tehnickim vjestinama za kreiranje raznolikih fotografija koje ukljucuju podrucja poput hrane i pica, zivotnog stila, wellnesa, interijera, dogadjaja.</p>
-        </div>
-        <div class="photo-type">
-            <div class="photo"><img class='photo' src="resources/images/luksuz.jpg" alt=""></div>
-            <h2>Luksuz</h2>
-            <p>Posebnosti i prednosti vaseg objekta, temelj su na kojem se gradi prica ciji je cilj uspjesno poslovanje. Stavljanje naglaska na lijepo i suptilno prikrivanje nedostataka je vjestina koja cini razliku izmedju uspjesnih i neuspjesnih objekata.</p>
+        <h2 class="centered fullwidth">Napisao bi nesto ovdje</h2>
+        <div class="outer-container">
+            <div class="photo-type">
+                <div class="photo-lifestyle"></div>
+                <h2>Zivotni stil</h2>
+                <p>Usko specijaliziran za docaravanje svijeta hoteljerstva, ugostiteljstva i turizma. Zivim fotografijama prikazuje Vase vlasnistvo u najboljem izdanju</p>
+            </div>
+            <div class="photo-type">
+                <div class="photo-food"></div>
+                <h2>Hrana i pice</h2>
+                <p>Svojom kreativnoscu, tehnickim vjestinama za kreiranje raznolikih fotografija koje ukljucuju podrucja poput hrane i pica, zivotnog stila, wellnesa, interijera, dogadjaja.</p>
+            </div>
+            <div class="photo-type">
+                <div class="photo-luxury"></div>
+                <h2>Luksuz</h2>
+                <p>Posebnosti i prednosti vaseg objekta, temelj su na kojem se gradi prica ciji je cilj uspjesno poslovanje. Stavljanje naglaska na lijepo i suptilno prikrivanje nedostataka je vjestina koja cini razliku izmedju uspjesnih i neuspjesnih objekata.</p>
+            </div>
         </div>
     </div>
-    <div class="section four cetiri">
-        <h2>Kako mogu pomoci Vama</h2>
-        <div class="help">
+    <div class="section four">
+        <h2 class='centered fullwidth'>Kako mogu pomoci Vama</h2>
+        <div class="outer-container">
             <div class="help-type">
                 <img src="./resources/images/detalji.jpg" alt="">
                 <h3>Budite zapazeni</h3>
@@ -100,7 +102,7 @@
     <div class="section five references">
         <h2>Nekoliko rijeci zadovoljnih klijenata</h2>
         <div class="reference">
-            <p class='reference-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quos temporibus cupiditate veniam mollitia eos sint ad doloribus voluptates vero, alias voluptatum omnis ex ipsa perferendis nesciunt laboriosam, neque accusantium?</p>
+            <p class='reference-text'>"Ivan je totalna, jebena zvjerka. Fotografije su mu vrhunske, ima oko za detalje."</p>
             <div class="reference-author">
                 <img src="./resources/images/profile.jpg" alt="">
                 <p>Ivan, MrakSolutions</p>
@@ -108,32 +110,44 @@
         </div>
     </div>
     <div class="section six mini-blog">
-        <h2 class='centered'>Besplatni savjeti</h2>
-        <div class="mini-post">
-            <div class="mini-post-img"></div>
-            <div class="mini-post-txt">
-                <h2>NASLOV</h2>
-                <p>04.05.2021.</p>
+        <h2 class='centered fullwidth'>Besplatni savjeti</h2>
+        <div class="outer-container">
+            <div class="mini-post">
+                <div class="mini-post-img"></div>
+                <div class="mini-post-txt">
+                    <h2>14 koraka za uspješnu pripremu</h2>
+                    <p>04.05.2021.</p>
+                </div>
             </div>
-        </div>
-        <div class="mini-post">
-            <div class="mini-post-img"></div>
-            <div class="mini-post-txt">
-                <h2>NASLOV</h2>
-                <p>04.05.2021.</p>
+            <div class="mini-post">
+                <div class="mini-post-img"></div>
+                <div class="mini-post-txt">
+                    <h2>Blog naslov 2</h2>
+                    <p>04.05.2021.</p>
+                </div>
             </div>
-        </div>
-        <div class="mini-post">
-            <div class="mini-post-img"></div>
-            <div class="mini-post-txt">
-                <h2>NASLOV</h2>
-                <p>04.05.2021.</p>
+            <div class="mini-post">
+                <div class="mini-post-img"></div>
+                <div class="mini-post-txt">
+                    <h2>Blog naslov 3</h2>
+                    <p>04.05.2021.</p>
+                </div>
             </div>
         </div>
     </div>
     <footer>
-        <div class="social"></div>
-        
+        <h2 class='centered fullwidth'>Dostupan sam putem e-maila, whatsappa, te na društvenim mrežama</h2>
+        <div class="mailtel">
+            <p>ivan.miljak@hotmail.com</p><p> +385 98 7654321</p>
+        </div>
+        <div class='footer-outer'>
+            <p>2021 Miljak Photography, sva prava pridrzana</p>
+            <div class="social">
+                <a href="#"><img src="./resources/images/SVG/facebook.svg" alt=""></a></a>
+                <a href="#"><img src="./resources/images/SVG/instagram.svg" alt=""></a></a>        
+            </div>
+            <p>web by: MrakSolutions</p>
+        </div>
     </footer>
 </body>
 <script src="./resources/JS/main.js"></script>

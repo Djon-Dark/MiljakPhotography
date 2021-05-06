@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const slogan = document.querySelector('.slogan');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
@@ -18,7 +19,8 @@ window.addEventListener('load',()=>{
     }, 4500);
     setTimeout(() => {
         whiteout.classList.add('disable');
-    }, 10000);
+        body.classList.remove('scroll-disabled');
+    }, 7000);
 })
 //
 
@@ -45,7 +47,7 @@ let i=0;
 setTimeout(() => {
    setInterval(() => {
     i+=1;
-    console.log(i);
+    //console.log(i);
     if(i===5){
         
     }

@@ -4,6 +4,7 @@
     list-style: none;
     text-decoration: none;
     color: black;
+    box-sizing: border-box;
 }
 *::-webkit-scrollbar {
     display: none;
@@ -19,11 +20,18 @@ h3{
 .centered{
     text-align: center;
 }
+.fullwidth{
+    width: 100vw;
+    margin: 2rem 0;
+}
 body{
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
     font-family: 'Montserrat', sans-serif;
+}
+.scroll-disabled{
+    overflow: hidden;
 }
 header{
     height: 8vh;
@@ -114,18 +122,13 @@ width: 100%;
 .section{
     min-height: 100vh;
     width: 100vw;
-    margin-bottom: 3rem;
-}
-.handlebar{
-    height: 3px;
-    width: 10vw;
-    background-color: rgb(39, 39, 39);
-    margin: 0 40vw;
-    border-radius: 3px;
+    padding: 3rem 0;
+    background-color: white;
 }
 .one{
     background: url("../images/curanakrevetu.jpg") bottom/cover;
     transition: all 1s ease; 
+    min-height: 100vh;
 }
     /* floating text */
 .floating-text{
@@ -219,15 +222,6 @@ width: 100%;
     transition: all 2s ease;
 }
     /* slogan */
-    /* main img carousel */
-.main-image-carousel{
-    height: 100%;
-    width: 100vw;
-}
-.img1{
-    height: 100%;
-}
-    /* main img carousel */
 /* MAIN PART */
 /* SECTION TWO about and contact form */
 .about{
@@ -238,20 +232,19 @@ width: 100%;
 }
 .text{
     min-width: 25rem;
-    max-width: 40rem;
+    max-width: 45rem;
     padding-right: 3rem;
     margin-bottom: 3rem;
 }
 .contact-form{
-    width: 40%;
-    height: 30rem; 
     
+    height: 30rem; 
     border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 1rem;
-    box-shadow: 0 0 1rem lightgray;
+    box-shadow: 0 0.5rem 1rem rgb(70,70,70, 0.5);
 }
 form{
     display: flex;
@@ -262,55 +255,91 @@ input{
     height: 2rem;
     border: none;
     outline: none;
-    background-color: lightgray;
+    background-color: rgb(240, 240, 240);
     margin-bottom: 1rem;
     padding-left: 1rem;
     font: inherit;
     border-radius: 0.2rem;
+    transition: all 0.3s ease;
+}
+input:hover{
+    background-color:  rgba(170, 170, 170);
 }
 textarea{
     border: none;
     outline: none;
-    background-color: lightgray;
+    background-color: rgb(240, 240, 240);
     resize: none;
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 0.2rem;
     font: inherit;
+    transition: all 0.3s ease;
+}
+textarea:hover{
+    background-color:  rgba(170, 170, 170);
+}
+.contact-form button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: rgba(70, 70, 70);
+    color: white;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.contact-form button:hover{
+    background-color:tomato;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 /* SECTION TWO about and contact form */
 /* SECTION THREE types of photos */
 .three{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+}
+.outer-container{
+    display: flex;
+    justify-content: space-evenly;
     gap: 2rem;
     flex-wrap: wrap;
 }
 .photo-type{
-    width: 25%;
-    min-width: 20rem;
-    min-width: 25rem;
+    width: 25rem;
+
 }
 .photo{
-    height: 15rem;
-    width: 100%;
+    width: 20rem;
     border-radius: 0.3rem;
 }
-.photo
+.photo-lifestyle{
+    height: 15rem;
+    border-radius: 0.3rem;
+    background: url('../images/curanakrevetu.jpg') center/cover;
+}
+.photo-food{
+    height: 15rem;
+    border-radius: 0.3rem;
+    background: url('../images/hrana.jpg') center/cover;
+}
+.photo-luxury{
+    height: 15rem;
+    border-radius: 0.3rem;
+    background: url('../images/detalji.jpg') center/cover;
+}
 /* SECTION THREE types of photos */
 /* SECTION FOUR help you */
-.four {/*+++++++++++++++++++++  OVO JE SJEBANO IZ NEKOG RAZLOGA +++++++++++++++++++++*/
+.four {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: red;
-}
-.four h2{
-    margin: 2rem;
-    text-align: center;
 }
 .help{
     display: flex;
@@ -324,7 +353,6 @@ textarea{
 }
 .help-type img{
     width: 100%;
-    
 }
 /* SECTION FOUR help you */
 /* SECTION FIVE references */
@@ -336,7 +364,7 @@ textarea{
 }
 .reference{
     text-align: center;
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,6 +372,8 @@ textarea{
 }
 .reference-text{
     margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 100;
 }
 .reference img{
     width: 5rem;
@@ -354,9 +384,11 @@ textarea{
 /* SECTION SIX mini blog */
 .mini-blog{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 50vh;
 }
 .mini-blog h2{
     width: 100%;
@@ -380,5 +412,42 @@ footer{
     width: 100%;
     height: 50vh;
     background-color: rgb(39, 39, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
 }
+footer h2{
+    color: white;
+}
+.mailtel{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.footer-outer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer p{
+    color: white;
+    margin: 0 2rem;
+    width: 30%;
+    text-align: center;
+}
+.social img{
+    height: 2rem;
+    margin: 2rem;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+}
+.social img:hover{
+    filter: grayscale(0);
+}
+
 /* FOOTER */
