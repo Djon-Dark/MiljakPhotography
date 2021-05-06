@@ -73,9 +73,23 @@ setTimeout(() => {
             break;
     }
 }, 5000); 
-}, 3000);
+}, 3000)
 
-        
+
+const navSlide = () => {
+    const navbar = document.querySelector('.navbar');
+    const burger = document.querySelector('.burger');
+    
+    burger.addEventListener('click', ()=>{    
+        //Toggle nav
+        navbar.classList.toggle('navbar-open');   
+        //Burger Animation
+        burger.classList.toggle('toggle');
+        //burger.classList.toggle('spin');
+        body.classList.toggle('scroll-disabled');
+    });
+}
+navSlide();
    
 
     
