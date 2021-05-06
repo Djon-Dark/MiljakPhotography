@@ -50,7 +50,6 @@ header:hover{
 }
 .navbar{
     display: flex;
-    max-width: 50vw;
 }
 .navbar li{
     margin: 0 1rem;
@@ -70,7 +69,15 @@ header:hover{
 .navbar li:hover::after {
 width: 100%;
 }
-  
+.burger{
+    display: none;
+}
+.burger div{
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 255, 255); /* COLORS */
+    transition: all 0.3s ease;
+}
 /* MAIN PART */
 /* floating text animation */
 @keyframes slide-in {
@@ -121,7 +128,6 @@ width: 100%;
 }
 .section{
     min-height: 100vh;
-    width: 100vw;
     padding: 3rem 0;
     background-color: white;
 }
@@ -237,7 +243,6 @@ width: 100%;
     margin-bottom: 3rem;
 }
 .contact-form{
-    
     height: 30rem; 
     border-radius: 0.3rem;
     display: flex;
@@ -424,23 +429,24 @@ footer{
 footer h2{
     color: white;
 }
-.mailtel{
+.footer-outer{
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
 }
-.footer-outer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-footer p{
+.footer-inner{
     color: white;
     margin: 0 2rem;
     text-align: center;
 }
-.social img{
+footer p{
+ color: white;
+ margin: 1rem 0;
+}
+.footer-inner img{
     height: 2rem;
     margin: 2rem;
     filter: grayscale(1);
@@ -449,5 +455,30 @@ footer p{
 .social img:hover{
     filter: grayscale(0);
 }
-
 /* FOOTER */
+
+@media screen and (max-width:400px){
+    .section{
+        
+    }
+    .text{
+        padding: 0 1rem;
+        text-align: justify;
+    }
+    .contact-form{
+        margin: 0 1rem;
+        height: auto;
+    }
+    .contact-form button{
+        width: 100%;
+    }
+    .outer-container{
+        width: 90vw;
+    }
+    .help-type{
+        width: auto;
+    }
+    .footer-inner img{
+        filter:grayscale(0);
+    }
+}
