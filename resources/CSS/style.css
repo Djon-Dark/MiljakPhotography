@@ -71,12 +71,18 @@ width: 100%;
 }
 .burger{
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+    cursor: pointer;
 }
 .burger div{
     width: 30px;
-    height: 5px;
+    height: 3px;
     background-color: rgb(255, 255, 255); /* COLORS */
     transition: all 0.3s ease;
+    border-radius: 3px;
+    
 }
 /* MAIN PART */
 /* floating text animation */
@@ -316,26 +322,24 @@ textarea:hover{
 }
 .photo-type{
     width: 25rem;
-
-}
-.photo{
-    width: 20rem;
-    border-radius: 0.3rem;
 }
 .photo-lifestyle{
     height: 15rem;
     border-radius: 0.3rem;
     background: url('../images/curanakrevetu.jpg') center/cover;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 .photo-food{
     height: 15rem;
     border-radius: 0.3rem;
     background: url('../images/hrana.jpg') center/cover;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 .photo-luxury{
     height: 15rem;
     border-radius: 0.3rem;
     background: url('../images/detalji.jpg') center/cover;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 /* SECTION THREE types of photos */
 /* SECTION FOUR help you */
@@ -358,6 +362,8 @@ textarea:hover{
 }
 .help-type img{
     width: 100%;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 /* SECTION FOUR help you */
 /* SECTION FIVE references */
@@ -458,8 +464,8 @@ footer p{
 /* FOOTER */
 
 @media screen and (max-width:400px){
-    .section{
-        
+    .burger{
+        display: flex;
     }
     .text{
         padding: 0 1rem;
