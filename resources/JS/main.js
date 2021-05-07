@@ -76,10 +76,11 @@ setTimeout(() => {
 }, 3000)
 
 
+
+const navbar = document.querySelector('.navbar');
+const burger = document.querySelector('.burger');
+
 const navSlide = () => {
-    const navbar = document.querySelector('.navbar');
-    const burger = document.querySelector('.burger');
-    
     burger.addEventListener('click', ()=>{    
         //Toggle nav
         navbar.classList.toggle('navbar-open');   
@@ -91,5 +92,13 @@ const navSlide = () => {
 }
 navSlide();
    
-
-    
+/*
+navbar.forEach(element => {
+    console.log(element);
+    element.addEventListener('click',()=>{
+        burger.classList.toggle('toggle');
+        navbar.classList.toggle('navbar-open'); 
+        body.classList.remove('scroll-disabled');
+    })
+});
+ */   
