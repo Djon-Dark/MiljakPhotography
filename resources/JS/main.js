@@ -32,11 +32,17 @@ function preloader() {
 		var img2 = new Image();
 		var img3 = new Image();
 		var img4 = new Image();
+		var img5 = new Image();
+		var img6 = new Image();
+		var img7 = new Image();
 
 		img1.src = "resources/images/zalazak2.jpg";
 		img2.src = "resources/images/dorucak.jpg";
 		img3.src = "resources/images/wellness2.jpg";
 		img4.src = "resources/images/terasa.jpg";
+		img5.src = "resources/images/bazenhotel.jpg";
+		img6.src = "resources/images/plavikauc.jpg";
+		img7.src = "resources/images/soba1.jpg";
 	}
 }
 preloader();
@@ -48,7 +54,7 @@ setTimeout(() => {
    setInterval(() => {
     i+=1;
     //console.log(i);
-    if(i===5){
+    if(i===8){
         
     }
     switch (i) {
@@ -67,6 +73,15 @@ setTimeout(() => {
             break;
         case 5: 
             one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover";
+            break;
+        case 6: 
+            one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover";
+            break;
+        case 7: 
+            one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover";
+            break;
+        case 8: 
+            one.style.background = "url('resources/images/soba1.jpg') bottom/cover";
             i=0;
             break;
         default:
@@ -101,4 +116,11 @@ navbar.forEach(element => {
         body.classList.remove('scroll-disabled');
     })
 });
- */   
+ */
+
+const galerija = document.querySelector('.gallery');
+const floatingtext = document.querySelector('.floating-text');
+galerija.addEventListener('click',()=>{
+    floatingtext.classList.toggle('testzamiljaka');
+})
+
