@@ -514,7 +514,7 @@ footer p{
         background-color:rgb(70, 70, 70);
         transition: all 0.2s ease;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         font-size: 2rem;
         padding: 2rem;
     }
@@ -523,6 +523,11 @@ footer p{
     }
     .burger{
         display: flex;
+    }
+    .slogan{
+        top: auto;
+        bottom: 2rem;
+        font-size: 1.5rem;
     }
     .text{
         padding: 0 1rem;
@@ -540,6 +545,12 @@ footer p{
     }
     .help-type{
         width: auto;
+    }
+    .mini-blog{
+        margin-bottom: 70vh;
+    }
+    footer{
+        height: 70vh;
     }
     .footer-inner img{
         filter:grayscale(0);
