@@ -6,6 +6,7 @@ const whiteout = document.querySelector('.whiteout');
 
 //whiteout - load animation
 window.addEventListener('load',()=>{
+    //navbar.classList.add('disable');
     setTimeout(() => {
         first.classList.remove('hide');
     }, 500);
@@ -98,29 +99,37 @@ const burger = document.querySelector('.burger');
 const navSlide = () => {
     burger.addEventListener('click', ()=>{    
         //Toggle nav
+        //navbar.classList.toggle('disable');
         navbar.classList.toggle('navbar-open');   
         //Burger Animation
         burger.classList.toggle('toggle');
         //burger.classList.toggle('spin');
         body.classList.toggle('scroll-disabled');
+        one.classList.toggle('blur');
     });
 }
 navSlide();
    
-/*
-navbar.forEach(element => {
-    console.log(element);
-    element.addEventListener('click',()=>{
-        burger.classList.toggle('toggle');
-        navbar.classList.toggle('navbar-open'); 
-        body.classList.remove('scroll-disabled');
-    })
-});
- */
-
+//TEST SA CRNOM POZADINOM ZA TESKT - IZBRISI
 const galerija = document.querySelector('.gallery');
 const floatingtext = document.querySelector('.floating-text');
 galerija.addEventListener('click',()=>{
     floatingtext.classList.toggle('testzamiljaka');
 })
+//TEST SA CRNOM POZADINOM ZA TESKT - IZBRISI
 
+
+if(window.matchMedia("(max-width: 700px)")){
+    const navlink = document.querySelectorAll('.navlink');
+    navlink.forEach(link=>{
+        link.addEventListener('click',()=>{
+            //Toggle nav
+            navbar.classList.remove('navbar-open');   
+            //Burger Animation
+            burger.classList.remove('toggle');
+            //burger.classList.toggle('spin');
+            body.classList.remove('scroll-disabled');
+            one.classList.toggle('blur');
+        })
+    })
+}
