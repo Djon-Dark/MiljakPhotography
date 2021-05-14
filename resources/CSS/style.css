@@ -84,8 +84,8 @@ width: 100%;
     top: 1rem;
     right: 1rem;
     flex-direction: column;
-    justify-content: space-around;
-    height: 2rem;
+    justify-content: space-between;
+    height: 1.2rem;
     cursor: pointer;
 }
 .burger div{
@@ -96,13 +96,13 @@ width: 100%;
     border-radius: 3px;
 }
 .toggle .line1{    
-    transform: rotate(-45deg) translate(-6px,9px);
+    transform: rotate(-45deg) translate(-3px,9px);
 }
 .toggle .line2{    
     opacity: 0;
 }
 .toggle .line3{    
-    transform: rotate(45deg) translate(-6px,-9px);
+    transform: rotate(45deg) translate(-3px,-9px);
 }
 /* MAIN PART */
 /* floating text animation */
@@ -135,6 +135,8 @@ width: 100%;
     background: url("../images/curanakrevetu.jpg") bottom/cover;
     transition: all 1s ease; 
     min-height: 100vh;
+    background-attachment: fixed;
+    
 }
     /* floating text */
 .floating-text{
@@ -465,9 +467,9 @@ footer h2{
     transition: all 0.2s ease;
 }
 footer p{
- color: white;
- margin: 1rem 0;
- font-size: 0.7rem;
+    color: white;
+    margin: 1rem 0;
+    font-size: 0.7rem;
 }
 .footer-inner img{
     height: 2rem;
@@ -574,12 +576,16 @@ footer p{
     }
     .outer-container{
         width: 90vw;
+        gap: 0;
     }
     .help-type{
         width: auto;
     }
     .mini-blog{
         margin-bottom: 100vh;
+    }
+    .mini-post{
+        margin: 2rem 0;
     }
     footer{
         height: 100vh;
