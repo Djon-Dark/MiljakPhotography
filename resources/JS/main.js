@@ -3,6 +3,9 @@ const slogan = document.querySelector('.slogan');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const whiteout = document.querySelector('.whiteout');
+const one = document.querySelector('.one');
+const navbar = document.querySelector('.navbar');
+const burger = document.querySelector('.burger');
 
 //whiteout - load animation
 window.addEventListener('load',()=>{
@@ -49,15 +52,12 @@ function preloader() {
 preloader();
 
 //main image carousell
-const one = document.querySelector('.one');
+
 let i=0;
 setTimeout(() => {
    setInterval(() => {
     i+=1;
     //console.log(i);
-    if(i===8){
-        
-    }
     switch (i) {
         case 1: 
             one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover";
@@ -91,37 +91,42 @@ setTimeout(() => {
 }, 5000); 
 }, 3000)
 
-
-
-const navbar = document.querySelector('.navbar');
-const burger = document.querySelector('.burger');
-
-const navSlide = () => {
-    burger.addEventListener('click', ()=>{    
-        //Toggle nav
-        //navbar.classList.toggle('disable');
-        navbar.classList.toggle('navbar-open');   
+const navbarAnimation = ()=>{
+    if(!navbar.classList.contains('disable')){
         //Burger Animation
         burger.classList.toggle('toggle');
-        //burger.classList.toggle('spin');
+        //Toggle nav
+        navbar.classList.toggle('navbar-open');   
         body.classList.toggle('scroll-disabled');
         one.classList.toggle('blur');
-    });
+        setTimeout(() => {
+            navbar.classList.add('disable');
+        }, 200);
+        return;
+    }
+    navbar.classList.remove('disable');
+    setTimeout(() => {
+        //Burger Animation
+        burger.classList.toggle('toggle');
+        //Toggle nav
+        navbar.classList.toggle('navbar-open');   
+        body.classList.toggle('scroll-disabled');
+        one.classList.toggle('blur');
+    }, 50);
 }
-navSlide();
+
+const burgerInteraction = () => {
+    burger.addEventListener('click', navbarAnimation);
+}
 
 
-if(window.matchMedia("(max-width: 700px)")){
+//navlink functionality - close the navbar when clicked and toggle burger state
+if(window.matchMedia("(max-width: 500px)")){// OVO NE RADU=I, PA JEBE DESKTOP NAVBAR/NAVLINKS
+    console.log('RADI');
+    navbar.classList.add('disable');
+    burgerInteraction();
     const navlink = document.querySelectorAll('.navlink');
     navlink.forEach(link=>{
-        link.addEventListener('click',()=>{
-            //Toggle nav
-            navbar.classList.remove('navbar-open');   
-            //Burger Animation
-            burger.classList.remove('toggle');
-            //burger.classList.toggle('spin');
-            body.classList.remove('scroll-disabled');
-            one.classList.toggle('blur');
-        })
+        link.addEventListener('click', navbarAnimation)
     })
 }
