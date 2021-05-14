@@ -149,7 +149,6 @@ width: 100%;
     font-weight: 400;
     opacity: 0;
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.4);
     padding: 0 1rem;
 }
 .small-text{
@@ -158,7 +157,6 @@ width: 100%;
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0 1rem;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 .ivan{
     transition: slide-in 1s ease-out, floating 6s ease-in-out;
@@ -202,9 +200,22 @@ width: 100%;
     position:absolute;
     top: 0;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* preload images for carousell */
-    background: linear-gradient(to right, white,white), url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover;
+    background: linear-gradient(to right, rgb(50,50,50),rgb(50,50,50)), url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover;
     transition: all 2s ease-in-out;
+}
+.whiteout h1{
+    font-size: 3rem;
+    color: rgba(45,45,45);
+}
+.whiteout img{
+    min-width: 2rem;
+    max-width: 5rem;
+    opacity: 0.1;
 }
 .hide{
     opacity: 0;
@@ -227,9 +238,11 @@ width: 100%;
 }
 .first{
     transition: all 2s ease;
+    color: white;
 }
 .second{
     transition: all 2s ease;
+    color: white;
 }
     /* slogan */
 /* MAIN PART */
@@ -493,7 +506,7 @@ footer p{
         top: 0;
         z-index: 4;
         background-color:rgba(0,0,0, 0.8);
-        transition: all 0.2s ease;
+        transition: all 0.5s ease;
         flex-direction: column;
         justify-content: center;
         font-size: 2rem;
@@ -512,11 +525,18 @@ footer p{
     .burger{
         display: flex;
     }
+    .one{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
     .floating-text{
         position: static;
         display: flex;
         align-items: center;
         justify-content: center;
+        transform: translateX(-2rem);
     }
     .text-container{
         width: 100%;
@@ -529,7 +549,6 @@ footer p{
     }
     .small-text{
         font-size: 1rem;
-        width: 20%;
     }
     .photography{
         font-size: 2.5rem;

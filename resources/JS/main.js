@@ -109,14 +109,6 @@ const navSlide = () => {
     });
 }
 navSlide();
-   
-//TEST SA CRNOM POZADINOM ZA TESKT - IZBRISI
-const galerija = document.querySelector('.gallery');
-const floatingtext = document.querySelector('.floating-text');
-galerija.addEventListener('click',()=>{
-    floatingtext.classList.toggle('testzamiljaka');
-})
-//TEST SA CRNOM POZADINOM ZA TESKT - IZBRISI
 
 
 if(window.matchMedia("(max-width: 700px)")){
