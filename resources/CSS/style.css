@@ -135,8 +135,6 @@ width: 100%;
     background: url("../images/curanakrevetu.jpg") bottom/cover;
     transition: all 1s ease; 
     min-height: 100vh;
-    background-attachment: fixed;
-    
 }
     /* floating text */
 .floating-text{

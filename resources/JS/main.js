@@ -60,29 +60,29 @@ setTimeout(() => {
     //console.log(i);
     switch (i) {
         case 1: 
-            one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover";
             slogan.style.textShadow= "0 0 1rem rgba(70, 70, 70, 0.5)";
             break;
         case 2: 
-            one.style.background = "url('resources/images/dorucak.jpg') bottom/cover fixed";    
+            one.style.background = "url('resources/images/dorucak.jpg') bottom/cover";    
             break;
         case 3: 
-            one.style.background = "url('resources/images/wellness2.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/wellness2.jpg') bottom/cover";
             break;
         case 4: 
-            one.style.background = "url('resources/images/terasa.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/terasa.jpg') bottom/cover";
             break;
         case 5: 
-            one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover";
             break;
         case 6: 
-            one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover";
             break;
         case 7: 
-            one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover";
             break;
         case 8: 
-            one.style.background = "url('resources/images/soba1.jpg') bottom/cover fixed";
+            one.style.background = "url('resources/images/soba1.jpg') bottom/cover";
             i=0;
             break;
         default:
@@ -121,7 +121,8 @@ const burgerInteraction = () => {
 
 
 //navlink functionality - close the navbar when clicked and toggle burger state
-if(window.matchMedia("(max-width: 500px)")){// OVO NE RADU=I, PA JEBE DESKTOP NAVBAR/NAVLINKS
+const mediaQuery = window.matchMedia('(max-width: 500px)')
+if(mediaQuery.matches){// OVO NE RADU=I, PA JEBE DESKTOP NAVBAR/NAVLINKS
     console.log('RADI');
     navbar.classList.add('disable');
     burgerInteraction();
