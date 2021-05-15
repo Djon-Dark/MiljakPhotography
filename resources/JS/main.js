@@ -1,11 +1,16 @@
 const body = document.querySelector('body');
-const slogan = document.querySelector('.slogan');
+const header = document.querySelector('header');
+const navbar = document.querySelector('.navbar');
+const burger = document.querySelector('.burger');
+const slogan = document.querySelectorAll('.slogan');
+const section = document.querySelectorAll('.section');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const whiteout = document.querySelector('.whiteout');
 const one = document.querySelector('.one');
-const navbar = document.querySelector('.navbar');
-const burger = document.querySelector('.burger');
+const two = document.querySelector('.two');
+const footer = document.querySelector('footer');
+
 
 //whiteout - load animation
 window.addEventListener('load',()=>{
@@ -60,29 +65,29 @@ setTimeout(() => {
     //console.log(i);
     switch (i) {
         case 1: 
-            one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover";
+            one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover fixed";
             slogan.style.textShadow= "0 0 1rem rgba(70, 70, 70, 0.5)";
             break;
         case 2: 
-            one.style.background = "url('resources/images/dorucak.jpg') bottom/cover";    
+            one.style.background = "url('resources/images/dorucak.jpg') bottom/cover fixed";    
             break;
         case 3: 
-            one.style.background = "url('resources/images/wellness2.jpg') bottom/cover";
+            one.style.background = "url('resources/images/wellness2.jpg') bottom/cover fixed";
             break;
         case 4: 
-            one.style.background = "url('resources/images/terasa.jpg') bottom/cover";
+            one.style.background = "url('resources/images/terasa.jpg') bottom/cover fixed";
             break;
         case 5: 
-            one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover";
+            one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover fixed";
             break;
         case 6: 
-            one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover";
+            one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover fixed";
             break;
         case 7: 
-            one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover";
+            one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover fixed";
             break;
         case 8: 
-            one.style.background = "url('resources/images/soba1.jpg') bottom/cover";
+            one.style.background = "url('resources/images/soba1.jpg') bottom/cover fixed";
             i=0;
             break;
         default:
@@ -98,20 +103,29 @@ const navbarAnimation = ()=>{
         //Toggle nav
         navbar.classList.toggle('navbar-open');   
         body.classList.toggle('scroll-disabled');
-        one.classList.toggle('blur');
+        section.forEach(element => {
+            element.classList.toggle('blur');
+        });
+        footer.classList.toggle('blur');
         setTimeout(() => {
             navbar.classList.add('disable');
+            header.style.zIndex = '3';
         }, 200);
         return;
     }
     navbar.classList.remove('disable');
+    //SAKRIVANJE NASLOVA I SLOGANA *********************************************************
+    header.style.zIndex = '6';
     setTimeout(() => {
         //Burger Animation
         burger.classList.toggle('toggle');
         //Toggle nav
         navbar.classList.toggle('navbar-open');   
         body.classList.toggle('scroll-disabled');
-        one.classList.toggle('blur');
+        section.forEach(element => {
+            element.classList.toggle('blur');
+        });
+        footer.classList.toggle('blur');
     }, 50);
 }
 
@@ -122,8 +136,7 @@ const burgerInteraction = () => {
 
 //navlink functionality - close the navbar when clicked and toggle burger state
 const mediaQuery = window.matchMedia('(max-width: 500px)')
-if(mediaQuery.matches){// OVO NE RADU=I, PA JEBE DESKTOP NAVBAR/NAVLINKS
-    console.log('RADI');
+if(mediaQuery.matches){
     navbar.classList.add('disable');
     burgerInteraction();
     const navlink = document.querySelectorAll('.navlink');
@@ -131,3 +144,18 @@ if(mediaQuery.matches){// OVO NE RADU=I, PA JEBE DESKTOP NAVBAR/NAVLINKS
         link.addEventListener('click', navbarAnimation)
     })
 }
+
+//hide floating text and slogan when covered by section two
+const twoToTop = two.getBoundingClientRect().top;
+
+/*
+window.addEventListener('scroll',()=>{
+    setTimeout(() => {
+        console.log(twoToTop-window.pageYOffset);
+        return;
+    }, 500);
+    
+})
+*/
+
+
