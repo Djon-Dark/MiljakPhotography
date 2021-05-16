@@ -58,44 +58,47 @@ function preloader() {
 preloader();
 
 //main image carousell
+const carousellBackground = ()=>{
+    let i=0;
+    setTimeout(() => {
+    setInterval(() => {
+        i+=1;
+        //console.log(i);
+        switch (i) {
+            case 1: 
+                one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover fixed";
+                slogan.style.textShadow= "0 0 1rem rgba(70, 70, 70, 0.5)";
+                break;
+            case 2: 
+                one.style.background = "url('resources/images/dorucak.jpg') bottom/cover fixed";    
+                break;
+            case 3: 
+                one.style.background = "url('resources/images/wellness2.jpg') bottom/cover fixed";
+                break;
+            case 4: 
+                one.style.background = "url('resources/images/terasa.jpg') bottom/cover fixed";
+                break;
+            case 5: 
+                one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover fixed";
+                break;
+            case 6: 
+                one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover fixed";
+                break;
+            case 7: 
+                one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover fixed";
+                break;
+            case 8: 
+                one.style.background = "url('resources/images/soba1.jpg') bottom/cover fixed";
+                i=0;
+                break;
+            default:
+                break;
+        }
+    }, 5000); 
+    }, 3000)
+}
+//carousellBackground(); OVO OTKOMENTIRAJ DA VRATIS CAROUSELL U NORMALU +++++++++++++++++++++++++++++++++
 
-let i=0;
-setTimeout(() => {
-   setInterval(() => {
-    i+=1;
-    //console.log(i);
-    switch (i) {
-        case 1: 
-            one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover fixed";
-            slogan.style.textShadow= "0 0 1rem rgba(70, 70, 70, 0.5)";
-            break;
-        case 2: 
-            one.style.background = "url('resources/images/dorucak.jpg') bottom/cover fixed";    
-            break;
-        case 3: 
-            one.style.background = "url('resources/images/wellness2.jpg') bottom/cover fixed";
-            break;
-        case 4: 
-            one.style.background = "url('resources/images/terasa.jpg') bottom/cover fixed";
-            break;
-        case 5: 
-            one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover fixed";
-            break;
-        case 6: 
-            one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover fixed";
-            break;
-        case 7: 
-            one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover fixed";
-            break;
-        case 8: 
-            one.style.background = "url('resources/images/soba1.jpg') bottom/cover fixed";
-            i=0;
-            break;
-        default:
-            break;
-    }
-}, 5000); 
-}, 3000)
 
 const navbarAnimation = ()=>{
     if(!navbar.classList.contains('disable')){
@@ -144,7 +147,61 @@ if(mediaQuery.matches){
     navlink.forEach(link=>{
         link.addEventListener('click', navbarAnimation)
     })
+
+
+    //iOS workaround for background-attachment: fixed
+    /* blica, ne svidja mi se ++++++++++++++++++++++++++++++++++++++++++
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("iosbackground");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    */
+   //FADE
+   function slider (){
+        const slides = document.querySelectorAll('.iosbackground');
+        let i=0;
+        setInterval(() => {
+            let previous = i-1;
+            let next = i+1;
+            //slides[previous].style.opacity = '0';
+            //console.log(slides[i-1]);
+            //slides[i+1].style.opacity = '0';
+            slides[i].style.opacity = '1';
+            //slides[next].style.opacity = '0';
+            //console.log(previous);
+            //console.log(next);
+            i++;
+            if(i===7){
+                setTimeout(() => {
+                i=0;
+                slides[1].style.opacity = '0';
+                slides[2].style.opacity = '0';
+                slides[3].style.opacity = '0';
+                slides[4].style.opacity = '0';
+                slides[5].style.opacity = '0';
+                slides[6].style.opacity = '0';
+                slides[7].style.opacity = '0';
+                }, 2000);
+            }
+            console.log(i);
+        }, 2000);
+
+   }
+   slider();
+
 }
+
+
 
 //Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
 //so it doesnt show on top of footer
