@@ -2,7 +2,8 @@ const body = document.querySelector('body');
 const header = document.querySelector('header');
 const navbar = document.querySelector('.navbar');
 const burger = document.querySelector('.burger');
-const slogan = document.querySelectorAll('.slogan');
+const floatingText = document.querySelector('.floating-text');
+const slogan = document.querySelector('.slogan');
 const section = document.querySelectorAll('.section');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
@@ -145,17 +146,39 @@ if(mediaQuery.matches){
     })
 }
 
-//hide floating text and slogan when covered by section two
-const twoToTop = two.getBoundingClientRect().top;
-
-/*
-window.addEventListener('scroll',()=>{
-    setTimeout(() => {
-        console.log(twoToTop-window.pageYOffset);
-        return;
+//Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
+//so it doesnt show on top of footer
+function fixFooter(){
+    setInterval(() => {
+        const twoToTop = two.getBoundingClientRect().top;
+    if(twoToTop<=-500){
+        floatingText.style.opacity = 0;
+        slogan.style.opacity = 0;
+    } else{
+        floatingText.style.opacity = 1;
+        slogan.style.opacity = 1;
+    }
     }, 500);
-    
-})
-*/
+}
+
+//debounce
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+//
+
+let handleScrollStart = debounce(fixFooter,100,true);
+window.addEventListener('scroll',handleScrollStart);
 
 
