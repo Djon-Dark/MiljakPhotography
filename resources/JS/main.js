@@ -8,6 +8,7 @@ const section = document.querySelectorAll('.section');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const whiteout = document.querySelector('.whiteout');
+const ioscarousell = document.querySelector('.ioscarousell');
 const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
@@ -139,18 +140,16 @@ const burgerInteraction = () => {
     burger.addEventListener('click', navbarAnimation);
 }
 
-
-//navlink functionality - close the navbar when clicked and toggle burger state
+//MEDIA QUERY =======================================================================
 const mediaQuery = window.matchMedia('(max-width: 500px)')
 if(mediaQuery.matches){
+    //navlink functionality - close the navbar when clicked and toggle burger state
     navbar.classList.add('disable');
     burgerInteraction();
     const navlink = document.querySelectorAll('.navlink');
     navlink.forEach(link=>{
         link.addEventListener('click', navbarAnimation)
     })
-
-
     //iOS workaround for background-attachment: fixed
    function slider (){
         const slides = document.querySelectorAll('.iosbackground');
@@ -183,12 +182,15 @@ if(mediaQuery.matches){
 function fixFooter(){
     setInterval(() => {
         const twoToTop = two.getBoundingClientRect().top;
-    if(twoToTop<=-500){
+    if(twoToTop<=-1000){
         floatingText.style.opacity = 0;
         slogan.style.opacity = 0;
+        ioscarousell.style.display = 'none'
     } else{
         floatingText.style.opacity = 1;
         slogan.style.opacity = 1;
+        ioscarousell.style.top = 0;
+        ioscarousell.style.display = 'block'
     }
     }, 500);
 }

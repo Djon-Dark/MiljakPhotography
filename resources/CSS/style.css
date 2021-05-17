@@ -81,7 +81,7 @@ width: 100%;
 .burger{
     display: none;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     top: 1rem;
     right: 1rem;
     flex-direction: column;
@@ -516,7 +516,7 @@ footer p{
         width: 100vw;
         position: fixed;
         top: 0;
-        z-index: 2;
+        z-index: 4;
         background-color:rgba(30,30,30, 0.7);
         transition: all 0.3s ease;
         flex-direction: column;
@@ -529,10 +529,13 @@ footer p{
         opacity: 1;
     }
     .blur{
-        filter: blur(5px);
+        filter: blur(15px);
     }
     .navbar li{
         margin: 1rem 0;
+    }
+    .navlink div{
+        color: white;
     }
     .burger{
         display: flex;
@@ -554,29 +557,12 @@ footer p{
         overflow: hidden;
     }
     .iosbackground{
-        height: 100%;
+        width: 300%;
         opacity: 0;
         transition: all 1s ease;
-        position: fixed;
+        position: absolute;
         top: 0;
-        left: 0;
-    }
-    /* Fading animation */
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 5s;
-        animation-name: fade;
-        animation-duration: 5s;
-    }
-    
-    @-webkit-keyframes fade {
-        from {opacity: 0}
-        to {opacity: 1}
-    }
-    
-    @keyframes fade {
-        from {opacity: 0}
-        to {opacity: 1}
+        right: 0;
     }
     /* IOS WORKAROUND FOR BACKGROUND ATTACHMENT FIXED +++++++++++++++++++*/
 
@@ -610,8 +596,7 @@ footer p{
         font-size: 2.5rem;
     }
     .slogan{
-        top: auto;
-        bottom: 2rem;
+        top: 35rem;
         font-size: 1.5rem;
     }
     .text{
