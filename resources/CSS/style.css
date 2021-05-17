@@ -556,7 +556,7 @@ footer p{
     .iosbackground{
         height: 100%;
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: all 1s ease;
         position: fixed;
         top: 0;
         left: 0;

@@ -12,7 +12,9 @@ const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
 
-console.log(' STATUS: NA IOS FADE ANIMACIJA NE RADI KAKO TREBA, ZADNJA SLIKA SE PRESKOCI ILI TSKO NESTO')
+console.log(' STATUS: Na iOS workaround one background prekrije footer. Spojiti treba sa funkcijom za skrivanje floating teksta');
+console.log(' STATUS: Na iOS workaround srediti poziciju slika');
+console.log(' STATUS: Na mobile view otvaranje burgera makne slogan');
 //whiteout - load animation
 window.addEventListener('load',()=>{
     //navbar.classList.add('disable');
@@ -150,55 +152,28 @@ if(mediaQuery.matches){
 
 
     //iOS workaround for background-attachment: fixed
-    /* blica, ne svidja mi se ++++++++++++++++++++++++++++++++++++++++++
-    var slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("iosbackground");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 5000); // Change image every 5 seconds
-    }
-    */
-   //FADE
    function slider (){
         const slides = document.querySelectorAll('.iosbackground');
         let i=0;
         setInterval(() => {
-            let previous = i-1;
-            let next = i+1;
-            //slides[previous].style.opacity = '0';
-            //console.log(slides[i-1]);
-            //slides[i+1].style.opacity = '0';
             slides[i].style.opacity = '1';
-            //slides[next].style.opacity = '0';
-            //console.log(previous);
-            //console.log(next);
             i++;
-            if(i===7){
-                setTimeout(() => {
-                i=0;
+            if(i===8){
                 slides[1].style.opacity = '0';
                 slides[2].style.opacity = '0';
                 slides[3].style.opacity = '0';
                 slides[4].style.opacity = '0';
                 slides[5].style.opacity = '0';
                 slides[6].style.opacity = '0';
+                setTimeout(() => {
+                i=0;
                 slides[7].style.opacity = '0';
-                }, 2000);
+                console.log('delay');
+                }, 4900);
             }
-            console.log(i);
-        }, 2000);
-
+        }, 5000);
    }
    slider();
-
 }
 
 
