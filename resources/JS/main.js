@@ -12,7 +12,7 @@ const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
 
-
+console.log(' STATUS: NA IOS FADE ANIMACIJA NE RADI KAKO TREBA, ZADNJA SLIKA SE PRESKOCI ILI TSKO NESTO')
 //whiteout - load animation
 window.addEventListener('load',()=>{
     //navbar.classList.add('disable');
