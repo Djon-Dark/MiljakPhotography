@@ -13,7 +13,7 @@ const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
 
-console.log(' STATUS: Na iOS workaround one background prekrije footer. Spojiti treba sa funkcijom za skrivanje floating teksta');
+console.log(' STATUS: U JS dodati media query za iOS, i iOS workaround preseliti u to');
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
 console.log(' STATUS: Na mobile view otvaranje burgera makne slogan');
 //whiteout - load animation
@@ -100,7 +100,7 @@ const carousellBackground = ()=>{
     }, 5000); 
     }, 3000)
 }
-//carousellBackground(); OVO OTKOMENTIRAJ DA VRATIS CAROUSELL U NORMALU +++++++++++++++++++++++++++++++++
+carousellBackground(); //OVO OTKOMENTIRAJ DA VRATIS CAROUSELL U NORMALU +++++++++++++++++++++++++++++++++
 
 
 const navbarAnimation = ()=>{
@@ -113,6 +113,7 @@ const navbarAnimation = ()=>{
         section.forEach(element => {
             element.classList.toggle('blur');
         });
+        slogan.classList.toggle('blur');
         footer.classList.toggle('blur');
         setTimeout(() => {
             navbar.classList.add('disable');
@@ -132,6 +133,7 @@ const navbarAnimation = ()=>{
         section.forEach(element => {
             element.classList.toggle('blur');
         });
+        console.log(slogan.getBoundingClientRect().top);
         footer.classList.toggle('blur');
     }, 50);
 }
@@ -150,32 +152,36 @@ if(mediaQuery.matches){
     navlink.forEach(link=>{
         link.addEventListener('click', navbarAnimation)
     })
-    //iOS workaround for background-attachment: fixed
-   function slider (){
-        const slides = document.querySelectorAll('.iosbackground');
-        let i=0;
-        setInterval(() => {
-            slides[i].style.opacity = '1';
-            i++;
-            if(i===8){
-                slides[1].style.opacity = '0';
-                slides[2].style.opacity = '0';
-                slides[3].style.opacity = '0';
-                slides[4].style.opacity = '0';
-                slides[5].style.opacity = '0';
-                slides[6].style.opacity = '0';
-                setTimeout(() => {
-                i=0;
-                slides[7].style.opacity = '0';
-                console.log('delay');
-                }, 4900);
-            }
-        }, 5000);
-   }
-   slider();
 }
 
+//iOS workaround for background-attachment: fixed
+function slider (){
+    const slides = document.querySelectorAll('.iosbackground');
+    let i=0;
+    setInterval(() => {
+        slides[i].style.opacity = '1';
+        i++;
+        if(i===8){
+            slides[1].style.opacity = '0';
+            slides[2].style.opacity = '0';
+            slides[3].style.opacity = '0';
+            slides[4].style.opacity = '0';
+            slides[5].style.opacity = '0';
+            slides[6].style.opacity = '0';
+            setTimeout(() => {
+            i=0;
+            slides[7].style.opacity = '0';
+            console.log('delay');
+            }, 4900);
+        }
+    }, 5000);
+}
 
+let ismobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+if(ismobile){
+    slider();
+    ioscarousell.style.display = 'none';
+}
 
 //Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
 //so it doesnt show on top of footer
