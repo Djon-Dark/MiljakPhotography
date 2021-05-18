@@ -15,7 +15,6 @@ const footer = document.querySelector('footer');
 
 console.log(' STATUS: U JS dodati media query za iOS, i iOS workaround preseliti u to');
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
-console.log(' STATUS: Na mobile view otvaranje burgera makne slogan');
 //whiteout - load animation
 window.addEventListener('load',()=>{
     //navbar.classList.add('disable');
@@ -158,29 +157,31 @@ if(mediaQuery.matches){
 function slider (){
     const slides = document.querySelectorAll('.iosbackground');
     let i=0;
-    setInterval(() => {
-        slides[i].style.opacity = '1';
-        i++;
-        if(i===8){
-            slides[1].style.opacity = '0';
-            slides[2].style.opacity = '0';
-            slides[3].style.opacity = '0';
-            slides[4].style.opacity = '0';
-            slides[5].style.opacity = '0';
-            slides[6].style.opacity = '0';
-            setTimeout(() => {
-            i=0;
-            slides[7].style.opacity = '0';
-            console.log('delay');
-            }, 4900);
-        }
-    }, 5000);
+    setTimeout(() => {
+        setInterval(() => {
+            slides[i].style.opacity = '1';
+            i++;
+            if(i===8){
+                slides[1].style.opacity = '0';
+                slides[2].style.opacity = '0';
+                slides[3].style.opacity = '0';
+                slides[4].style.opacity = '0';
+                slides[5].style.opacity = '0';
+                slides[6].style.opacity = '0';
+                setTimeout(() => {
+                i=0;
+                slides[7].style.opacity = '0';
+                console.log('delay');
+                }, 4900);
+            }
+        }, 5000);
+    }, 4000);
 }
 
 let ismobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 if(ismobile){
     slider();
-    ioscarousell.style.display = 'none';
+    ioscarousell.style.display = 'block';
 }
 
 //Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
@@ -197,6 +198,7 @@ function fixFooter(){
         slogan.style.opacity = 1;
         ioscarousell.style.top = 0;
         ioscarousell.style.display = 'block'
+        //dodaje se display block na carousell uporno, treba naci di
     }
     }, 500);
 }
