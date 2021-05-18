@@ -133,7 +133,7 @@ const navbarAnimation = ()=>{
         section.forEach(element => {
             element.classList.toggle('blur');
         });
-        console.log(slogan.getBoundingClientRect().top);
+        slogan.classList.toggle('blur');
         footer.classList.toggle('blur');
     }, 50);
 }
