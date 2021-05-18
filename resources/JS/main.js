@@ -185,6 +185,7 @@ function slider (){
 if(isApple){
     slider();
     ioscarousell.style.display = 'block';
+    footer.style.height = window.innerHeight;
 }
 
 //Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
