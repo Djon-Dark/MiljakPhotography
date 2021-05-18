@@ -1,6 +1,7 @@
 const body = document.querySelector('body');
 const header = document.querySelector('header');
 const navbar = document.querySelector('.navbar');
+const navlink = document.querySelectorAll('.navlink');
 const burger = document.querySelector('.burger');
 const floatingText = document.querySelector('.floating-text');
 const slogan = document.querySelector('.slogan');
@@ -15,6 +16,7 @@ const footer = document.querySelector('footer');
 
 //STATUS MESSAGES:
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
+console.log(' STATUS: Mozda bi dodao animaciju na svaki navlink. npr da iz opacity 0 -> translateY opacity 1');
 
 //whiteout - load animation
 window.addEventListener('load',()=>{
@@ -109,32 +111,41 @@ if(!isApple){
 
 
 const navbarAnimation = ()=>{
+    //HIDE NAV MENU
     if(!navbar.classList.contains('disable')){
         //Burger Animation
         burger.classList.toggle('toggle');
         //Toggle nav
         navbar.classList.toggle('navbar-open');   
+        //Disable scroll
         body.classList.toggle('scroll-disabled');
+        //Background blur
         section.forEach(element => {
             element.classList.toggle('blur');
         });
         slogan.classList.toggle('blur');
         footer.classList.toggle('blur');
+        //Disable navbar on load
         setTimeout(() => {
             navbar.classList.add('disable');
             header.style.zIndex = '3';
         }, 200);
         return;
     }
+    //DISPLAY NAV MENU
+    //First remove display:none
     navbar.classList.remove('disable');
-    //SAKRIVANJE NASLOVA I SLOGANA *********************************************************
+    //bring header to front
     header.style.zIndex = '6';
+    //wait 50ms so display: block comes in to effect
     setTimeout(() => {
         //Burger Animation
         burger.classList.toggle('toggle');
         //Toggle nav
         navbar.classList.toggle('navbar-open');   
+        //Disable scroll
         body.classList.toggle('scroll-disabled');
+        //Background blur
         section.forEach(element => {
             element.classList.toggle('blur');
         });
@@ -176,7 +187,6 @@ function slider (){
                 setTimeout(() => {
                 i=0;
                 slides[7].style.opacity = '0';
-                console.log('delay');
                 }, 4900);
             }
         }, 5000);
