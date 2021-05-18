@@ -59,6 +59,8 @@ function preloader() {
 }
 preloader();
 
+let isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
 //main image carousell
 const carousellBackground = ()=>{
     let i=0;
@@ -99,7 +101,9 @@ const carousellBackground = ()=>{
     }, 5000); 
     }, 3000)
 }
-carousellBackground(); //OVO OTKOMENTIRAJ DA VRATIS CAROUSELL U NORMALU +++++++++++++++++++++++++++++++++
+if(!isApple){
+    carousellBackground();
+}
 
 
 const navbarAnimation = ()=>{
@@ -178,8 +182,7 @@ function slider (){
     }, 4000);
 }
 
-let ismobile = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-if(ismobile){
+if(isApple){
     slider();
     ioscarousell.style.display = 'block';
 }
@@ -192,13 +195,16 @@ function fixFooter(){
     if(twoToTop<=-1000){
         floatingText.style.opacity = 0;
         slogan.style.opacity = 0;
-        ioscarousell.style.display = 'none'
+        if(isApple){
+            ioscarousell.style.display = 'none'
+        }
     } else{
         floatingText.style.opacity = 1;
         slogan.style.opacity = 1;
-        ioscarousell.style.top = 0;
-        ioscarousell.style.display = 'block'
-        //dodaje se display block na carousell uporno, treba naci di
+        if(isApple){
+           ioscarousell.style.display = 'block'//ovo prci normalni rad, ali treba za ajfon, da ne zablokira footer 
+        }
+        
     }
     }, 500);
 }
