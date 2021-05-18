@@ -218,8 +218,8 @@ width: 100%;
     z-index: 3;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     /* preload images for carousell */
     background: linear-gradient(to right, rgb(50,50,50),rgb(50,50,50)), url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover;
     transition: all 2s ease-in-out;
@@ -400,7 +400,7 @@ textarea:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .reference{
     text-align: center;
@@ -426,7 +426,6 @@ textarea:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 50vh;
 }
@@ -521,7 +520,7 @@ footer p{
         position: fixed;
         top: 0;
         z-index: 4;
-        background-color:rgba(30,30,30, 0.7);
+        background-color:rgba(30,30,30, 0.9);
         transition: all 0.3s ease;
         flex-direction: column;
         justify-content: center;
@@ -533,13 +532,17 @@ footer p{
         opacity: 1;
     }
     .blur{
-        filter: blur(15px);
+        filter: blur(10px);
     }
     .navbar li{
         margin: 1rem 0;
     }
     .burger{
         display: flex;
+    }
+    .whiteout{
+        justify-content: inherit;
+        padding: 10rem 0;
     }
     .one{
         display: flex;
@@ -626,6 +629,7 @@ footer p{
         height: 100vh;
         bottom: auto;
         top: 0;
+        margin-bottom: 8rem;
     }
     .footer-inner img{
         filter: invert(1);

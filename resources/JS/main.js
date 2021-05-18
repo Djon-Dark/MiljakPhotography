@@ -13,8 +13,9 @@ const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
 
-console.log(' STATUS: U JS dodati media query za iOS, i iOS workaround preseliti u to');
+//STATUS MESSAGES:
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
+
 //whiteout - load animation
 window.addEventListener('load',()=>{
     //navbar.classList.add('disable');
@@ -58,6 +59,7 @@ function preloader() {
 	}
 }
 preloader();
+//
 
 let isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
@@ -161,7 +163,6 @@ if(mediaQuery.matches){
 function slider (){
     const slides = document.querySelectorAll('.iosbackground');
     let i=0;
-    setTimeout(() => {
         setInterval(() => {
             slides[i].style.opacity = '1';
             i++;
@@ -179,7 +180,6 @@ function slider (){
                 }, 4900);
             }
         }, 5000);
-    }, 4000);
 }
 
 if(isApple){
