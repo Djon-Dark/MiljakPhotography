@@ -282,7 +282,7 @@ width: 100%;
     flex-direction: column;
     box-sizing: border-box;
     padding: 1rem;
-    box-shadow: 0 0.5rem 1rem rgb(70,70,70, 0.5);
+    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
 }
 form{
     display: flex;
@@ -550,7 +550,6 @@ footer p{
         margin: 1rem 0;
         opacity: 0;
         animation: mobilenavlinks 500ms ease forwards;
-   
     }
     .navbar li:nth-child(1){
         animation-delay: 100ms;
