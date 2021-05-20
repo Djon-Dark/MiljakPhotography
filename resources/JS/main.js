@@ -74,29 +74,29 @@ const carousellBackground = ()=>{
         //console.log(i);
         switch (i) {
             case 1: 
-                one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover";
                 slogan.style.textShadow= "0 0 1rem rgba(70, 70, 70, 0.5)";
                 break;
             case 2: 
-                one.style.background = "url('resources/images/dorucak.jpg') bottom/cover fixed";    
+                one.style.background = "url('resources/images/dorucak.jpg') bottom/cover";    
                 break;
             case 3: 
-                one.style.background = "url('resources/images/wellness2.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/wellness2.jpg') bottom/cover";
                 break;
             case 4: 
-                one.style.background = "url('resources/images/terasa.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/terasa.jpg') bottom/cover";
                 break;
             case 5: 
-                one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/zalazak2.jpg') bottom/cover";
                 break;
             case 6: 
-                one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/bazenhotel.jpg') bottom/cover";
                 break;
             case 7: 
-                one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/plavikauc.jpg') bottom/cover";
                 break;
             case 8: 
-                one.style.background = "url('resources/images/soba1.jpg') bottom/cover fixed";
+                one.style.background = "url('resources/images/soba1.jpg') bottom/cover";
                 i=0;
                 break;
             default:
@@ -107,6 +107,31 @@ const carousellBackground = ()=>{
 }
 if(!isApple){
     carousellBackground();
+}
+//iOS main image carousell
+function slider (){
+    const slides = document.querySelectorAll('.iosbackground');
+    let i=0;
+        setInterval(() => {
+            slides[i].style.opacity = '1';
+            i++;
+            if(i===8){
+                slides[1].style.opacity = '0';
+                slides[2].style.opacity = '0';
+                slides[3].style.opacity = '0';
+                slides[4].style.opacity = '0';
+                slides[5].style.opacity = '0';
+                slides[6].style.opacity = '0';
+                setTimeout(() => {
+                i=0;
+                slides[7].style.opacity = '0';
+                }, 4900);
+            }
+        }, 5000);
+}
+if(isApple){
+    slider();
+    ioscarousell.style.display = 'block';
 }
 
 
@@ -133,11 +158,11 @@ const navbarAnimation = ()=>{
         return;
     }
     //DISPLAY NAV MENU
-    //First remove display:none
+        //First remove display:none
     navbar.classList.remove('disable');
-    //bring header to front
+        //bring header to front
     header.style.zIndex = '6';
-    //wait 50ms so display: block comes in to effect
+        //wait 50ms so display: block comes in to effect
     setTimeout(() => {
         //Burger Animation
         burger.classList.toggle('toggle');
@@ -170,36 +195,11 @@ if(mediaQuery.matches){
     })
 }
 
-//iOS workaround for background-attachment: fixed
-function slider (){
-    const slides = document.querySelectorAll('.iosbackground');
-    let i=0;
-        setInterval(() => {
-            slides[i].style.opacity = '1';
-            i++;
-            if(i===8){
-                slides[1].style.opacity = '0';
-                slides[2].style.opacity = '0';
-                slides[3].style.opacity = '0';
-                slides[4].style.opacity = '0';
-                slides[5].style.opacity = '0';
-                slides[6].style.opacity = '0';
-                setTimeout(() => {
-                i=0;
-                slides[7].style.opacity = '0';
-                }, 4900);
-            }
-        }, 5000);
-}
 
-if(isApple){
-    slider();
-    ioscarousell.style.display = 'block';
-    footer.style.height = window.innerHeight;
-}
 
 //Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
 //so it doesnt show on top of footer
+/*
 function fixFooter(){
     setInterval(() => {
         const twoToTop = two.getBoundingClientRect().top;
@@ -239,5 +239,5 @@ function debounce(func, wait, immediate) {
 
 let handleScrollStart = debounce(fixFooter,100,true);
 window.addEventListener('scroll',handleScrollStart);
-
+*/
 

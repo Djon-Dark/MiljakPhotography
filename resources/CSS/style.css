@@ -48,7 +48,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     background-color: rgba(0,0,0,0);
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 3;
     transition: all 0.5s ease;
@@ -143,7 +143,6 @@ width: 100%;
     min-height: 90vh;
     height: 100vh;
     width: 100vw;
-    background-attachment: fixed;
     position: relative;
     z-index: 2;
 }
@@ -152,7 +151,7 @@ width: 100%;
 }
     /* floating text */
 .floating-text{
-    position: fixed;
+    position: absolute;
     top: 7rem;
     left: 2rem;
     display: flex;
@@ -246,7 +245,7 @@ width: 100%;
 .slogan{
     width: 100%;
     text-align: center;
-    position: fixed;
+    position: absolute;
     z-index: 3;
     top: 90vh;
     font-size: 2rem;
@@ -585,7 +584,7 @@ footer p{
     .ioscarousell{
         height: 60rem;
         width: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
         overflow: hidden;
     }
@@ -600,7 +599,7 @@ footer p{
     /* IOS WORKAROUND FOR BACKGROUND ATTACHMENT FIXED +++++++++++++++++++*/
 
     .floating-text{
-        position: fixed;
+        position: absolute;
         top: 5rem;
         left: auto;
         width: 100%;
