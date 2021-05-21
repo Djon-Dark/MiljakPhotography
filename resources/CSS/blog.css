@@ -1,5 +1,51 @@
-.newest-post{
+.new{
     height: 100vh;
     width: 100vw;
-    background: url('../images/DSC_2420-HDR-Edit-Edit.jpg') center/cover;
+    background: url('../images/bazen3.jpg') center/cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.new .text{
+    max-width: 50rem;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    backdrop-filter: blur(15px);
+}
+.new a{
+    color: white;
+}
+.new h1{
+    color: white;
+    font-size: 3rem;
+}
+.new h3{
+    color: white;
+}
+.new p{
+    color: white;
+}
+
+.archives{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+}
+.archives .post{
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2rem;
+    justify-items: center;
+}
+.archives .image{
+    background: url('../images/cestaibrdo.jpg') center/cover;
+    width: 70%;
+    height: 50vh;
+    overflow: hidden;
+}
+footer{
+    position:static;
 }
