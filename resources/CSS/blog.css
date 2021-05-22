@@ -9,12 +9,14 @@
 .new .text{
     max-width: 50rem;
     padding: 1rem;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    backdrop-filter: blur(15px);
-    background-color: rgba(70,70,70,0.3);
     margin: 0;
     padding-bottom: 2rem;
+    text-shadow: 0 1px 2px rgb(59, 59, 59,0.5), 0 0 1px rgb(59, 59, 59,0.5), 0 0 20px rgb(59, 59, 59);
+    transition: all 0.3s ease;
+}
+.new .text:hover{
+    backdrop-filter: blur(10px);
+    background-color: rgb(200,200,200,0.3);
 }
 .new a{
     color: white;
@@ -24,6 +26,7 @@
     font-size: 3rem;
 }
 .new .feature{
+    font-size: 1.5rem;
     color: rgb(102, 186, 255);
 }
 .new .intro{
