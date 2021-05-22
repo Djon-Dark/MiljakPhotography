@@ -6,7 +6,7 @@
     align-items: flex-end;
     justify-content: center;
 }
-.new .text{
+.new .post-text{
     max-width: 50rem;
     padding: 1rem;
     margin: 0;
@@ -14,7 +14,7 @@
     text-shadow: 0 1px 2px rgb(59, 59, 59,0.5), 0 0 1px rgb(59, 59, 59,0.5), 0 0 20px rgb(59, 59, 59);
     transition: all 0.3s ease;
 }
-.new .text:hover{
+.new .post-text:hover{
     backdrop-filter: blur(10px);
     background-color: rgb(200,200,200,0.3);
 }
@@ -44,17 +44,16 @@
     padding: 10vh 0;
 }
 .archives .post{
-    width: 90vw;
+    width: 95vw;
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-template-rows: 25rem;
-    gap: 2rem;
-    justify-items: center;
+    gap: 1rem 3rem;
+    justify-content: center;
     margin-bottom: 5rem;
 }
 .archives .image{
-    width: 90%;
-    min-width: 20rem;
+    width: 100%;
     overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
@@ -93,4 +92,11 @@
 
 footer{
     position:static;
+}
+
+@media screen and (max-width:500px){
+    .archives .post{
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-rows: 15rem;
+    }
 }
