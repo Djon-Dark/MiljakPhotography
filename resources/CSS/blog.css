@@ -1,7 +1,7 @@
 .new{
     height: 100vh;
     width: 100vw;
-    background: url('../images/bazen3.jpg') center/cover;
+    background: url('../images/sobarica2.jpg') center/cover;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -12,21 +12,28 @@
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     backdrop-filter: blur(15px);
+    background-color: rgba(70,70,70,0.3);
+    margin: 0;
+    padding-bottom: 2rem;
 }
 .new a{
     color: white;
 }
-.new h1{
+.new .heading{
     color: white;
     font-size: 3rem;
 }
-.new h3{
-    color: white;
+.new .feature{
+    color: rgb(102, 186, 255);
 }
-.new p{
+.new .intro{
     color: white;
+    margin: 2rem 0;
 }
-
+.date{
+    font-weight: lighter;
+    margin: 1rem 0;
+}
 .archives{
     display: flex;
     flex-direction: column;
@@ -36,16 +43,51 @@
 .archives .post{
     width: 90vw;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 25rem;
     gap: 2rem;
     justify-items: center;
+    margin-bottom: 5rem;
 }
 .archives .image{
-    background: url('../images/cestaibrdo.jpg') center/cover;
-    width: 70%;
-    height: 50vh;
+    width: 90%;
+    min-width: 20rem;
     overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
+.archives .intro{
+    margin: 2rem 0;
+}
+.readmore{
+    padding: 1rem;
+    width: 7rem;
+    margin: 1rem 0;
+    color: white;
+    background: rgb(70,70,70);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 1rem rgba(50, 50, 50, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.readmore:hover{    
+    background: rgb(102, 186, 255);
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+/* archived post images */
+.img1{
+    background: url('../images/cococay.jpg') center/cover;
+}
+.img2{
+    background: url('../images/sobarica1.jpg') center/cover;
+}
+.img3{
+    background: url('../images/recepcija1.jpg') center/cover;
+}
+/* archived post images */
+
+
 footer{
     position:static;
 }
