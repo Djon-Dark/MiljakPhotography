@@ -42,6 +42,8 @@
     flex-direction: column;
     align-items: center;
     padding: 10vh 0;
+    background-color: white;
+    margin-bottom: 50vh;
 }
 .archives .post{
     width: 95vw;
@@ -91,10 +93,12 @@
 
 
 footer{
-    position:static;
 }
 
 @media screen and (max-width:500px){
+    .archives{
+        margin-bottom: 100vh;
+    }
     .archives .post{
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         grid-template-rows: 15rem;
