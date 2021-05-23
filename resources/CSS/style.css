@@ -537,14 +537,17 @@ footer p{
         transition: all 0.3s ease;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         font-size: 2rem;
         padding: 2rem;
         opacity: 0;
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
     }
     .navbar-open{
         opacity: 1;
     }
+    /* IZBRISI OVAJ BLUR, PREBACIO SAM NA BACKDROP FILTER */
     .blur{
         filter: blur(10px);
     }

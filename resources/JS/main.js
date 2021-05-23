@@ -15,8 +15,10 @@ const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
 
 //STATUS MESSAGES:
+console.log(' STATUS: blog / galerija trebaju ostati selektirani u navbaru ako su otvoreni');
+console.log(' STATUS: klik na link sa bloga na index loada pocetnu animaciju');
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
-
+/*
 //whiteout - load animation
 window.addEventListener('load',()=>{
     //navbar.classList.add('disable');
@@ -61,7 +63,7 @@ window.addEventListener('load',()=>{
 }
 preloader();
 //
-
+*/
 let isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 //main image carousell
@@ -133,7 +135,7 @@ if(isApple){
     ioscarousell.style.display = 'block';
 }
 
-
+/*
 const navbarAnimation = ()=>{
     //HIDE NAV MENU
     if(!navbar.classList.contains('disable')){
@@ -143,14 +145,7 @@ const navbarAnimation = ()=>{
         navbar.classList.toggle('navbar-open');   
         //Disable scroll
         body.classList.toggle('scroll-disabled');
-        //Background blur - NEPOTREBNO, STAVIO SAM BACDROP FILTER U CSS
-        /*
-        section.forEach(element => {
-            element.classList.toggle('blur');
-        });
-        slogan.classList.toggle('blur');
-        footer.classList.toggle('blur');
-        */
+
         //Disable navbar on load
         setTimeout(() => {
             navbar.classList.add('disable');
@@ -171,14 +166,6 @@ const navbarAnimation = ()=>{
         navbar.classList.toggle('navbar-open');   
         //Disable scroll
         body.classList.toggle('scroll-disabled');
-        //Background blur - NEPOTREBNO, STAVIO SAM BACDROP FILTER U CSS
-        /*
-        section.forEach(element => {
-            element.classList.toggle('blur');
-        });
-        slogan.classList.toggle('blur');
-        footer.classList.toggle('blur');
-        */
     }, 50);
 }
 
@@ -197,7 +184,7 @@ if(mediaQuery.matches){
         link.addEventListener('click', navbarAnimation)
     })
 }
-
+*/
 
 
 //Actually, doesn't fix footer, instead it hides floating text and slogan when covered by section two
