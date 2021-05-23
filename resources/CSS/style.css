@@ -52,7 +52,7 @@ header{
     position: absolute;
     top: 0;
     z-index: 3;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 header:hover{
     background-color: rgb(30, 30, 30);
@@ -377,7 +377,6 @@ textarea:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .help{
@@ -410,6 +409,7 @@ textarea:hover{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 90vw;
 }
 .reference-text{
     margin: 2rem 0;
@@ -440,11 +440,18 @@ textarea:hover{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 2rem 0;
 }
 .mini-post-img{
     width: 100%;
     height: 15rem;
     border: 1px solid gray;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.mini-post-img:hover{
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+
 }
 /* SECTION SIX mini blog */
 /* FOOTER */
