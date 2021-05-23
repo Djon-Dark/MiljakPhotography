@@ -16,7 +16,6 @@ const footer = document.querySelector('footer');
 
 //STATUS MESSAGES:
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
-console.log(' STATUS: Mozda bi dodao animaciju na svaki navlink. npr da iz opacity 0 -> translateY opacity 1');
 
 //whiteout - load animation
 window.addEventListener('load',()=>{
@@ -40,7 +39,7 @@ window.addEventListener('load',()=>{
 //
 
 //preload images to avoid flicker on first show
-function preloader() {
+ const preloader = function () {
 	if (document.images) {
 
 		var img1 = new Image();
@@ -144,12 +143,14 @@ const navbarAnimation = ()=>{
         navbar.classList.toggle('navbar-open');   
         //Disable scroll
         body.classList.toggle('scroll-disabled');
-        //Background blur
+        //Background blur - NEPOTREBNO, STAVIO SAM BACDROP FILTER U CSS
+        /*
         section.forEach(element => {
             element.classList.toggle('blur');
         });
         slogan.classList.toggle('blur');
         footer.classList.toggle('blur');
+        */
         //Disable navbar on load
         setTimeout(() => {
             navbar.classList.add('disable');
@@ -170,12 +171,14 @@ const navbarAnimation = ()=>{
         navbar.classList.toggle('navbar-open');   
         //Disable scroll
         body.classList.toggle('scroll-disabled');
-        //Background blur
+        //Background blur - NEPOTREBNO, STAVIO SAM BACDROP FILTER U CSS
+        /*
         section.forEach(element => {
             element.classList.toggle('blur');
         });
         slogan.classList.toggle('blur');
         footer.classList.toggle('blur');
+        */
     }, 50);
 }
 
