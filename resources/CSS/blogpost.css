@@ -1,3 +1,24 @@
 .section{
     z-index: 0;
 }
+.step{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 0;
+    max-width: 50rem;
+    border-bottom: 1px solid gray;
+    background-color: white;
+}
+.step-image img{
+    height: 7rem;
+    width: 7rem;
+    margin: 0 1rem;
+}
+.step-text h2{
+    margin-top: 0;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
