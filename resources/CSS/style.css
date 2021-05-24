@@ -460,13 +460,16 @@ textarea:hover{
 .mini-post-img{
     width: 20rem;
     height: 15rem;
-    border: 1px solid gray;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 .mini-post-img:hover{
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
-
+    transform:scale(1.05);
+}
+.mini-post-img img{
+    height: 100%;
 }
 /* SECTION SIX mini blog */
 /* FOOTER */
