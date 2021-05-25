@@ -37,18 +37,23 @@
     border-bottom: 1px solid gray;
 }
 
-.step-image img{
-    height: 7rem;
-    width: 7rem;
-    margin: 0 1rem;
-}
-
 .step-text h2{
     margin-top: 0;
 }
 
 .reverse{
     flex-direction: row-reverse;
+}
+
+.step img{
+    float: left;
+    height: 7rem;
+    width: 7rem;
+    margin: 0 1rem;
+}
+
+.reverse img{
+    float: right;
 }
 
 .closing-words{
@@ -79,6 +84,7 @@
     .step-image img{
         height: 5rem;
         width: 5rem;
+        margin-left: 0;
     }
     .summary{
         padding: 1.5rem;
