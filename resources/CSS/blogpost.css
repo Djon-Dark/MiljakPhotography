@@ -32,7 +32,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     max-width: 50rem;
     border-bottom: 1px solid gray;
 }
@@ -54,6 +54,7 @@
 .closing-words{
     max-width: 50rem;
     margin: 2rem 0;
+    padding: 1rem;
 }
 
 .summary{
@@ -64,4 +65,19 @@
 }
 .summary h2{
     margin-top: 0;
+    border-bottom: 1px solid rgb(102, 186, 255)
+}
+
+@media screen and (max-width:500px)  {
+    .step{
+        padding: 1rem;
+    }
+    .step-image img{
+        height: 5rem;
+        width: 5rem;
+    }
+    .summary{
+        padding: 1.5rem;
+    }
+    
 }

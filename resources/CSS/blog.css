@@ -62,6 +62,7 @@
     width: 100%;
     overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.4rem;
 }
 .archives .intro{
     margin: 2rem 0;
@@ -72,7 +73,7 @@
     margin: 1rem 0;
     color: white;
     background: rgb(70,70,70);
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     box-shadow: 0 0.2rem 1rem rgba(50, 50, 50, 0.2);
     text-align: center;
     transition: all 0.3s ease;
