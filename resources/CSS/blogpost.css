@@ -41,6 +41,10 @@
     margin-top: 0;
 }
 
+.column{
+    flex-direction: column;
+}
+
 .reverse{
     flex-direction: row-reverse;
 }
@@ -89,5 +93,4 @@
     .summary{
         padding: 1.5rem;
     }
-    
 }
