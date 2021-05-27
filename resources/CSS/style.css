@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
     text-decoration: none;
     color: rgba(70, 70, 70);
     box-sizing: border-box;
@@ -57,6 +56,9 @@ header{
 header:hover{
     background-color: rgb(30, 30, 30);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+header ul{
+    list-style: none;
 }
 .navbar{
     display: flex;
