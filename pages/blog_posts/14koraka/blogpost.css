@@ -1,11 +1,47 @@
 *{
     color: rgba(70, 70, 70);
 }
+header{
+    position: static;
+    background: rgb(30,30,30);
+    opacity: 1;
+}
 
 .section{
     z-index: 0;
 }
+.italic{
+    font-style: italic;
+}
+.caption{
+    font-size: 0.7rem;
+    padding: 0 1rem;
+}
 
+.wholerow{
+    display: block;
+}
+.splash-background{
+    width: 50rem;
+    height: 30rem;
+    background: url(../../../resources/images/sobarica2.jpg) center/cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.post-date{
+    color: #CEA668;
+    margin-top: 2rem;
+}
+.splash-text{
+    max-width: 50rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    color: white;
+    text-shadow: 0 1px 2px rgb(59, 59, 59,0.5), 0 0 1px rgb(59, 59, 59,0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+}
 .blog-post{
     width: 100vw;
     display: flex;
@@ -81,7 +117,13 @@
     margin-bottom: 1rem;
 }
 
+
+
+
 @media screen and (max-width:500px)  {
+    .splash-background{
+        width: 100vw;
+    }
     .step{
         padding: 1rem;
     }

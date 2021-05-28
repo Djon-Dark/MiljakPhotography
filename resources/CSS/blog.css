@@ -72,15 +72,17 @@
     width: 7rem;
     margin: 1rem 0;
     color: white;
-    background: rgb(70,70,70);
-    border-radius: 0.4rem;
-    box-shadow: 0 0.2rem 1rem rgba(50, 50, 50, 0.2);
+    background: rgb(102, 186, 255);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(30, 30, 30, 0.5);
     text-align: center;
     transition: all 0.3s ease;
 }
+.readmore a{
+    color: white;
+}
 .readmore:hover{    
-    background: rgb(102, 186, 255);
-    border-radius: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(30, 30, 30, 0.2);
     cursor: pointer;
 }
 

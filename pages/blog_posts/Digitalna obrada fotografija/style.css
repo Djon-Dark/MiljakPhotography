@@ -2,11 +2,27 @@
 *{
     color: rgba(70, 70, 70);
 }
-
 .section{
     z-index: 0;
 }
-
+p{
+    margin: 1rem 0;
+}
+.italic{
+    font-style: italic;
+}
+.caption{
+    font-size: 0.7rem;
+    padding: 0 1rem;
+}
+.wholerow{
+    display: block;
+}
+header{
+    position: static;
+    background: rgb(30,30,30);
+    opacity: 1;
+}
 .blog-post{
     width: 100vw;
     display: flex;
@@ -14,48 +30,43 @@
     align-items: center;
     background-color: white;
 }
-
-.landing-image{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+.post-date{
+    color: #CEA668;
+    margin-top: 2rem;
 }
-
-.landing-image img{
-    width: 100%;
-}
-
-.blog-post .intro{
+.splash-text{
     max-width: 50rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    color: white;
+    text-shadow: 0 1px 2px rgb(59, 59, 59,0.5), 0 0 1px rgb(59, 59, 59,0.5);
+    transition: all 0.3s ease;
+    text-align: center;
 }
-
-.step{
+.splash-background{
+    width: 50rem;
+    height: 30rem;
+    background: url(../../../resources/images/soba2.jpg) center/cover;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
-    padding: 2rem 1rem;
+}
+.post-text{
     max-width: 50rem;
-    border-bottom: 1px solid gray;
+    padding: 1rem;
 }
-
-.step-text h2{
-    margin-top: 0;
+.post-text ul {
+    list-style-position: outside;
+    list-style-type: circle;
 }
-
-.column{
-    flex-direction: column;
+.post-text li{
+    margin: 0.5rem 2rem;
 }
-
-.reverse{
-    flex-direction: row-reverse;
-}
-
 .closing-words{
     max-width: 50rem;
     margin: 2rem 0;
     padding: 1rem;
 }
-
 .summary{
     padding: 2rem;
     margin: 4rem 0;
@@ -66,72 +77,9 @@
     margin-top: 0;
     border-bottom: 1px solid rgb(102, 186, 255)
 }
-
 .summary p{
     margin-bottom: 1rem;
 }
-
-@media screen and (max-width:500px)  {
-    .step{
-        padding: 1rem;
-    }
-    .step-image img{
-        height: 5rem;
-        width: 5rem;
-        margin-left: 0;
-    }
-    .summary{
-        padding: 1.5rem;
-    }
-}
-/* ------------------------------------------------------------- */
-p{
-    margin: 1rem 0;
-}
-.italic{
-    font-style: italic;
-}
-.caption{
-    font-size: 0.7rem;
-}
-
-.wholerow{
-    display: block;
-}
-.splash-background{
-    height: 100vh;
-    width: 100vw;
-    background: url(../../../resources/images/sauna.jpg) center/cover;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-.splash-text{
-    max-width: 50rem;
-    padding: 1rem;
-    margin: 0;
-    padding-bottom: 2rem;
-    color: white;
-    text-shadow: 0 1px 2px rgb(59, 59, 59,0.5), 0 0 1px rgb(59, 59, 59,0.5), 0 0 20px rgb(59, 59, 59);
-    transition: all 0.3s ease;
-}
-.splash-text:hover{
-    backdrop-filter: blur(10px);
-    background-color: rgb(255, 255, 255);
-}
-.post-text{
-    max-width: 50rem;
-    padding: 1rem;
-}
-
-.post-text ul {
-    list-style-position: outside;
-    list-style-type: circle;
-}
-.post-text li{
-    margin: 0.5rem 2rem;
-}
-
 .still-image{
     max-width: 50rem;
     overflow: hidden;
@@ -143,10 +91,12 @@ p{
     box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
     border-radius: 0.4rem;
 }
-
 .still-image img{
     width: 100%;
 }
+
+/* -------------------- COMMON STYLE ---------------------- */
+
 
 .compare-img{
     width: 50rem;
@@ -198,7 +148,13 @@ p{
   }
 /* image comparator */
 
+
+/* -------------------- COMMON MEDIA QUERY ---------------------- */
+
 @media screen and (max-width: 50rem){
+    .splash-background{
+        width: 100vw;
+    }
     .compare-img{
         width: 90vw;
         height: 70vw;
