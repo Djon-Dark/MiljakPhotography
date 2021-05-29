@@ -21,8 +21,11 @@ p{
 
 main{
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-bottom: 50vh;
     background-color: white;
+    gap: 2rem;
 }
 header{
     position: static;
@@ -30,7 +33,7 @@ header{
     opacity: 1;
 }
 .blog-post{
-    width: 100vw;
+    max-width: 70rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +53,7 @@ header{
     text-align: center;
 }
 .splash-background{
-    width: 50rem;
+    width: 48rem;
     height: 30rem;
     background: url(../../../resources/images/soba2.jpg) center/cover;
     display: flex;
@@ -107,6 +110,7 @@ header{
     flex-direction: column;
     align-items: center;
     padding-right: 1rem;
+    max-width: 30rem;
 }
 .micro-blog h4{
     margin: 1rem;
@@ -213,8 +217,34 @@ header{
 
 
 /* -------------------- COMMON MEDIA QUERY ---------------------- */
+@media screen and (max-width: 1170px){
+    
+    .micro-blog{
+        max-width: 50rem;
+    }
+
+   .micro-blog .outer-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    }
+    .micro-blog h4{
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 2rem;
+    }
+}
 
 @media screen and (max-width: 50rem){
+    *:hover{
+        box-shadow: none;
+    }
+    main{
+        margin-bottom: 100vh;
+    }
+    .blog-post{
+        width: 100vw;
+    }
     .splash-background{
         width: 100vw;
     }
@@ -229,5 +259,11 @@ header{
     .img-comp-img img {
         width: 90vw;
         height: 70vw;
+    }
+    .micro-post{
+        margin: 1rem;
+        box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+        border-radius: 0.4rem;
+        overflow: hidden;
     }
 }
