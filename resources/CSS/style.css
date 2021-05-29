@@ -448,6 +448,13 @@ textarea:hover{
     align-items: center;
     text-align: center;
     margin: 2rem 0;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+.mini-post:hover{
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+    transform:scale(1.05);
 }
 .mini-post:last-child{
     margin-right: 2rem;
@@ -466,7 +473,7 @@ textarea:hover{
     transition: all 0.3s ease;
     overflow: hidden;
 }
-.mini-post-img:hover{
+.mmini-post-img:hover{
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     transform:scale(1.05);
 }
@@ -689,6 +696,7 @@ footer p{
     }
     .mini-post{
         margin: 2rem 1rem;/* put 2rem 0 when iOS 14.1 comes out - supports flex gap*/
+        box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
     }
     footer{
         height: 100vh;

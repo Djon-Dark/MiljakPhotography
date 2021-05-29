@@ -18,6 +18,12 @@ p{
 .wholerow{
     display: block;
 }
+
+main{
+    display: flex;
+    margin-bottom: 50vh;
+    background-color: white;
+}
 header{
     position: static;
     background: rgb(30,30,30);
@@ -94,6 +100,63 @@ header{
 .still-image img{
     width: 100%;
 }
+
+/* SECTION SIX micro blog */
+.micro-blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 1rem;
+}
+.micro-blog h4{
+    margin: 1rem;
+    border-bottom: 1px solid rgb(30,30,30);
+}
+.micro-blog h2{
+    width: 100%;
+}
+.micro-blog .outer-container{
+    display: flex;
+    flex-direction: column;
+}
+.micro-post{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 20rem;
+    transition: all 0.3s ease;
+}
+.micro-post a{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.micro-post:hover{
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+    transform:scale(1.05);
+}
+.micro-post-img{
+    width: 7rem;
+    height: 7rem;
+    overflow: hidden;
+}
+.micro-post-txt{
+    text-align: center;    
+    width: 11rem;
+    padding-right: 2rem;
+
+}
+.micro-post-date{
+    color: rgb(206, 166, 104);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.micro-post-img img{
+    height: 100%;
+}
+/* SECTION SIX micro blog */
 
 /* -------------------- COMMON STYLE ---------------------- */
 
