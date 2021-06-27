@@ -3,6 +3,7 @@ const header = document.querySelector('header');
 const navbar = document.querySelector('.navbar');
 const navlink = document.querySelectorAll('.navlink');
 const burger = document.querySelector('.burger');
+const social = document.querySelector('.social');
 
 const navbarAnimation = ()=>{
     //HIDE NAV MENU
@@ -13,14 +14,6 @@ const navbarAnimation = ()=>{
         navbar.classList.toggle('navbar-open');   
         //Disable scroll
         body.classList.toggle('scroll-disabled');
-        //Background blur - NEPOTREBNO, STAVIO SAM BACDROP FILTER U CSS
-        /*
-        section.forEach(element => {
-            element.classList.toggle('blur');
-        });
-        slogan.classList.toggle('blur');
-        footer.classList.toggle('blur');
-        */
         //Disable navbar on load
         setTimeout(() => {
             navbar.classList.add('disable');

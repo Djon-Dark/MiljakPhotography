@@ -54,6 +54,24 @@ i{
     color: white;
 }
 
+.scroll-disabled{
+    overflow: hidden;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.disable{
+    display: none !important;
+}
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% { opacity: 0;}
+}
+
 body{
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -61,10 +79,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     width: 100vw;
-}
-
-.scroll-disabled{
-    overflow: hidden;
 }
 
 header{
@@ -94,12 +108,14 @@ header{
 .logo{
     text-align: center;
 }
+
 .logo h3{
     font-family: 'Caveat', cursive;
     font-size: 2rem;
     color: white;
     margin: 0;
 }
+
 .logo p{
     color: white;
     font-size: 0.8rem;
@@ -168,28 +184,9 @@ width: 100%;
 .toggle .line3{    
     transform: rotate(45deg) translate(-3px,-9px);
 }
+
 /* MAIN PART */
-/* floating text animation */
-@keyframes slide-in {
-    0%{
-        opacity: 0;
-    }
-    10%{
-        opacity: 0;
-    }
-    100%{
-        transform: translate3d(2rem, 0, 0);
-        opacity: 1;
-    }
-}
-@keyframes fadeSwitch {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
+
 .section{
     min-height: 100vh;
     padding: 3rem 0;
@@ -200,6 +197,7 @@ width: 100%;
     align-items: center;
     justify-content: center;
 }
+
 .one{
     background: url("../images/curanakrevetu.jpg") bottom/cover;
     transition: background 1s ease, filter 0.5s ease; 
@@ -209,17 +207,12 @@ width: 100%;
     position: relative;
     z-index: 2;
 }
+
 .ioscarousell{
     display: none;
 }
-    /* floating text */
 
     /* slogan */
-@keyframes fadeout {
-    0% {opacity: 1;}
-    50% {opacity: 1;}
-    100% { opacity: 0;}
-}
 .whiteout{
     width: 100vw;
     height: 100vh;
@@ -234,21 +227,18 @@ width: 100%;
     background: linear-gradient(to right, rgb(50,50,50),rgb(50,50,50)), url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover;
     transition: all 2s ease-in-out;
 }
+
 .whiteout h1{
     font-size: 3rem;
     color: rgba(45,45,45);
 }
+
 .whiteout img{
     min-width: 2rem;
     max-width: 5rem;
     opacity: 0.1;
 }
-.hide{
-    opacity: 0;
-}
-.disable{
-    display: none;
-}
+
 .white{
     color: white;
     text-shadow: 0 0 0.5rem rgb(0, 0, 0), 0 0 1rem rgb(0, 0, 0);
@@ -275,6 +265,7 @@ width: 100%;
     color: white;
 }
     /* slogan */
+
 /* MAIN PART */
 /* SECTION TWO about and contact form */
 .about{
@@ -456,10 +447,10 @@ width: 100%;
 .contact-container{
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .contact-form{
-    height: 30rem;
     width: 40%;
     max-width: 30rem;
     display: flex;
@@ -542,7 +533,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(70,70,70);
 }
 footer h2{
     color: white;
