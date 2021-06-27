@@ -5,31 +5,55 @@
     color: rgba(70, 70, 70);
     box-sizing: border-box;
 }
+
 *::-webkit-scrollbar {
     display: none;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
+p{
+    margin: 1rem 0;
+}
+
 h1{
     font-weight: 400;
     margin: 1rem 0;
 }
+
 h2{
     margin: 1rem 0;
     font-weight: 400;
 }
+
 h3{
     margin: 1rem 0;
     font-weight: 500;
 }
+
 .centered{
     text-align: center;
 }
+
 .fullwidth{
     width: 100vw;
     margin: 2rem 0;
 }
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin: 1rem 0;
+}
+
+i{
+    color: white;
+}
+
 body{
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -38,37 +62,59 @@ body{
     overflow-x: hidden;
     width: 100vw;
 }
+
 .scroll-disabled{
     overflow: hidden;
 }
+
 header{
-    height: 8vh;
+    height: 15vh;
     width: 100vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgba(0,0,0,0);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
     position: absolute;
     top: 0;
     z-index: 3;
     transition: all 0.3s ease;
+    padding: 0 1rem;
 }
-header:hover{
-    background-color: rgb(30, 30, 30);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+.social i{
+    font-size: 1.5rem;
+    color:rgba(255, 255, 255, 0.8);
+    margin: 0 1rem;
 }
-header ul{
-    list-style: none;
+
+.social i:hover{
+    color: white;
 }
+
+.logo{
+    text-align: center;
+}
+.logo h3{
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+}
+.logo p{
+    color: white;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
 .navbar{
+    list-style: none;
     display: flex;
 }
+
 .navbar li{
     margin: 0 1rem;
 }
-.navbar a{
-    color: white;
-}
+
 .navbar li::after {
     content: '';
     display: block;
@@ -78,12 +124,19 @@ header ul{
     background: rgb(255, 255, 255);
     transition: all 0.1s linear;
 }
+
 .navbar li:hover::after {
 width: 100%;
 }
+
+.navbar a{
+    color: white;
+}
+
 .navlink div{
     color: white;
 }
+
 .burger{
     display: none;
     position: absolute;
@@ -95,6 +148,7 @@ width: 100%;
     height: 1.2rem;
     cursor: pointer;
 }
+
 .burger div{
     width: 30px;
     height: 3px;
@@ -102,12 +156,15 @@ width: 100%;
     transition: all 0.3s ease;
     border-radius: 3px;
 }
+
 .toggle .line1{    
     transform: rotate(-45deg) translate(-3px,9px);
 }
+
 .toggle .line2{    
     opacity: 0;
 }
+
 .toggle .line3{    
     transform: rotate(45deg) translate(-3px,-9px);
 }
@@ -139,6 +196,9 @@ width: 100%;
     background-color: white;
     position: relative;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .one{
     background: url("../images/curanakrevetu.jpg") bottom/cover;
@@ -153,60 +213,7 @@ width: 100%;
     display: none;
 }
     /* floating text */
-.floating-text{
-    position: absolute;
-    top: 7rem;
-    left: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-shadow: 0 0 0.5rem rgb(0, 0, 0), 0 0 1rem rgb(0, 0, 0);
-}
-.big-text{
-    font-size: 4rem;
-    font-weight: 400;
-    opacity: 0;
-    color: rgb(255, 255, 255);
-    padding: 0 1rem;
-    margin: 0;
-}
-.small-text{
-    font-size: 2rem;
-    opacity: 0;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0 1rem;
-}
-.ivan{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 1s forwards 7s/*, floating 20s alternate 18s infinite*/;
-}
-.miljak{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 1s forwards 5s/*, floating 22s alternate 18s infinite*/;
-}
-.lifestyle{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 2s forwards 9s/*, floating 20s alternate  18s infinite*/;
-}
-.hotel{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 2s forwards 7s/*, floating 19s alternate  18s infinite*/;
-}
-.food{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 3s forwards 8s/*, floating 21s alternate  18s infinite*/;
-}
-.experience{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 3s forwards 8.5s/*, floating 20s alternate-reverse 18s infinite*/;
-}
-.photography{
-    transition: slide-in 1s ease-out, floating 6s ease-in-out;
-    animation: slide-in 1s forwards 5s/*, floating 22s alternate-reverse 18s infinite*/;
-    font-size: 3rem;
-}
-    /* floating text */
+
     /* slogan */
 @keyframes fadeout {
     0% {opacity: 1;}
@@ -252,9 +259,12 @@ width: 100%;
     position: absolute;
     z-index: 3;
     top: 90vh;
-    font-size: 2rem;
-    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    font-size: 1.7rem;
+    font-weight: 300;
     transition: all 1s ease;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
+    height: 10vh;
+    text-align: center;
 }
 .first{
     transition: all 2s ease;
@@ -269,74 +279,27 @@ width: 100%;
 /* SECTION TWO about and contact form */
 .about{
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3rem 2rem;
+    gap: 2rem;
 }
+
+.about img{
+    max-width: 35rem;
+    min-width: 20rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    margin: 0 1rem;
+}
+
 .text{
     min-width: 20rem;
     max-width: 45rem;
+    text-align: center;
+    margin: 0 1rem;
 }
-.contact-form{
-    height: 30rem; 
-    border-radius: 0.3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 1rem;
-    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
-}
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-input{
-    height: 2rem;
-    border: none;
-    outline: none;
-    background-color: rgb(240, 240, 240);
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    font: inherit;
-    border-radius: 0.2rem;
-    transition: all 0.3s ease;
-}
-input:hover{
-    background-color:  rgba(170, 170, 170);
-}
-textarea{
-    border: none;
-    outline: none;
-    background-color: rgb(240, 240, 240);
-    resize: none;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 0.2rem;
-    font: inherit;
-    transition: all 0.3s ease;
-}
-textarea:hover{
-    background-color:  rgba(170, 170, 170);
-}
-.contact-form button{
-    width: 10rem;
-    height: 3rem;
-    border-radius: 2rem;
-    border: none;
-    background-color: rgba(70, 70, 70);
-    color: white;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-.contact-form button:hover{
-    background-color:tomato;
-    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
-}
+
 /* SECTION TWO about and contact form */
 /* SECTION THREE types of photos */
 .three{
@@ -370,7 +333,7 @@ textarea:hover{
 .photo-luxury{
     height: 15rem;
     border-radius: 0.3rem;
-    background: url('../images/detalji.jpg') center/cover;
+    background: url('../images/luksuz.jpg') center/cover;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 /* SECTION THREE types of photos */
@@ -481,18 +444,105 @@ textarea:hover{
     height: 100%;
 }
 /* SECTION SIX mini blog */
+/* SECTION CONTACT */
+.contact{
+    max-width: 1980px;
+    width: 90%;
+    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    border-radius: 0.3rem;
+    padding: 2rem;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form{
+    height: 30rem;
+    width: 40%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+input{
+    height: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    font: inherit;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+}
+input:hover{
+    background-color:  rgba(170, 170, 170);
+}
+textarea{
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    resize: none;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.2rem;
+    font: inherit;
+    transition: all 0.3s ease;
+}
+textarea:hover{
+    background-color:  rgba(170, 170, 170);
+}
+.contact-form button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: rgba(70, 70, 70);
+    color: white;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.contact-form button:hover{
+    background-color:tomato;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.contact-details{
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.contact-details .social i{
+    color: rgba(70, 70, 70);
+    font-size: 2rem;
+}
+
+.contact-details .social i:hover{
+    color: black;
+}
+
 /* FOOTER */
 footer{
-    width: 100vw;
-    height: 50vh;
-    background-color: rgb(39, 39, 39);
+    height: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    z-index: -1;
+    border-top: 1px solid black;
 }
 footer h2{
     color: white;
@@ -505,14 +555,9 @@ footer h2{
     align-items: center;
     margin: 1rem;
 }
-.footer-inner{
-    color: white;
-    margin: 0 2rem;
-    text-align: center;
-    transition: all 0.2s ease;
-}
+
 footer p{
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 1rem 0;
     font-size: 0.7rem;
 }
@@ -525,7 +570,7 @@ footer p{
 .footer-inner a{
     color: white;
 }
-.social img:hover,
+
 .tel:hover,
 .mail:hover{
     filter: invert(0.5);
