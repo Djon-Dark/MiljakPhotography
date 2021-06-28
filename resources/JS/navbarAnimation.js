@@ -17,7 +17,6 @@ const navbarAnimation = ()=>{
         //Disable navbar on load
         setTimeout(() => {
             navbar.classList.add('disable');
-            header.style.zIndex = '3';
         }, 200);
         return;
     }
@@ -25,7 +24,6 @@ const navbarAnimation = ()=>{
         //First remove display:none
     navbar.classList.remove('disable');
         //bring header to front
-    header.style.zIndex = '6';
         //wait 50ms so display: block comes in to effect
     setTimeout(() => {
         //Burger Animation
@@ -34,14 +32,6 @@ const navbarAnimation = ()=>{
         navbar.classList.toggle('navbar-open');   
         //Disable scroll
         body.classList.toggle('scroll-disabled');
-        //Background blur - NEPOTREBNO, STAVIO SAM BACDROP FILTER U CSS
-        /*
-        section.forEach(element => {
-            element.classList.toggle('blur');
-        });
-        slogan.classList.toggle('blur');
-        footer.classList.toggle('blur');
-        */
     }, 50);
 }
 
@@ -49,8 +39,10 @@ const burgerInteraction = () => {
     burger.addEventListener('click', navbarAnimation);
 }
 
+burgerInteraction();
+
 //MEDIA QUERY =======================================================================
-const mediaQuery = window.matchMedia('(max-width: 500px)')
+const mediaQuery = window.matchMedia('(max-width: 768px)')
 if(mediaQuery.matches){
     //navlink functionality - close the navbar when clicked and toggle burger state
     navbar.classList.add('disable');

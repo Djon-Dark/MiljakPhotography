@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const slogan = document.querySelector('.slogan');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const whiteout = document.querySelector('.whiteout');
@@ -14,8 +15,7 @@ window.addEventListener('load',()=>{
     }, 2500);
     setTimeout(() => {
         whiteout.classList.add('hide');
-        first.classList.add('white');
-        second.classList.add('white');
+        slogan.classList.add('move-back');
     }, 4500);
     setTimeout(() => {
         whiteout.classList.add('disable');
