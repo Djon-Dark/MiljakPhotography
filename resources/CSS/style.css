@@ -596,6 +596,104 @@ footer p{
 }
 /* FOOTER */
 
+/* BLOG */
+.intro{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(50,50,50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .text{
+    width: 30vw;
+    height: 75vh;
+    box-shadow: 2rem 0rem 1rem -1rem rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    margin-top: 10vh;
+    position: absolute;
+    left: 0;
+    background-color: rgb(50,50,50);
+}
+
+.intro .text h1{
+    color: white;
+}
+.intro .text p{
+    color: white;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.posts{
+    width: 70vw;
+    height: 70vh;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    /* box-shadow: -2rem 0.5rem 1rem rgba(0, 0, 0, 0.5), 0 0.5rem 1rem rgba(0, 0, 0, 0.5); */
+    border-radius: 0.4rem;
+    margin-top: 10vh;
+    margin-left: 30vw;
+    padding-left: 3rem;
+}
+
+.post{
+    width: 20rem; /* OVO IZ NEKOG RAZLOGA NE RADI. NIJE SIRINA 18REM NEGO IH STISNE. DRUGE JEDINICE NE POMAZU */
+    height: 30rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background-color:  rgb(50,50,50);
+    margin: 1rem;
+    flex-shrink: 0;
+}
+
+.post-image{
+    height: 40%;
+    overflow: hidden;
+}
+
+.post-image img{
+    width: 100%;
+}
+
+.post-text{
+    padding: 1rem;
+    height: 60%;
+}
+
+.post-text .date{
+    font-size: 0.7rem;
+    color:rgba(70, 70, 70, 0.5);
+    margin: 0;
+    height: 1rem;
+    color: white;
+}
+
+.post-text h3{
+    height: 2rem;
+    color: white;
+}
+
+.post-text p{
+    font-size: 0.8rem;
+    height: 8rem;
+    line-height: 1.2rem;
+    color: white;
+}
+
+.read-more{
+    color: orange;
+}
+
+.read-more i{
+    font-size: 1rem;
+    color: orange;
+}
+/* BLOG */
+
 @media screen and (max-width:768px){
     header{
         background-color: rgba(70, 70, 70, 0);
