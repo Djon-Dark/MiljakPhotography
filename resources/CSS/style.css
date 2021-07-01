@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: rgba(70, 70, 70);
+    color: var(--text-color);
+    /* color: white; */
     box-sizing: border-box;
 }
 
@@ -12,6 +13,12 @@
 
 html{
     scroll-behavior: smooth;
+}
+
+body{
+    --text-color: rgb(240,240,240);
+    --bkg-color: rgb(30,30,30);
+    --dark-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5);
 }
 
 p{
@@ -204,7 +211,8 @@ width: 100%;
 .section{
     min-height: 100vh;
     padding: 3rem 0;
-    background-color: white;
+    background: var(--bkg-color);
+    /* background-color: rgb(50,50,50); */
     position: relative;
     z-index: 3;
     display: flex;
@@ -403,66 +411,11 @@ width: 100%;
     margin: 1rem;
 }
 /* SECTION FIVE references */
-/* SECTION SIX mini blog */
-.mini-blog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50vh;
-}
-.mini-blog h2{
-    width: 100%;
-}
-.mini-blog .outer-container{
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    width: 100vw;
-    justify-content: stretch;
-    padding-left: 2rem;
-}
-.mini-post{
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 2rem 0;
-    transition: all 0.3s ease;
-    padding: 1rem;
-    border-radius: 0.4rem;
-}
-.mini-post:hover{
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
-    transform:scale(1.05);
-}
-.mini-post:last-child{
-    margin-right: 2rem;
-}
-.mini-post:first-child{
-    margin-left: 2rem;
-}
-.mini-blog .outer-container:last-child::after{
-    content: '';
-    padding-right: 0.02px;
-}
-.mini-post-img{
-    width: 20rem;
-    height: 15rem;
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-.mmini-post-img:hover{
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
-    transform:scale(1.05);
-}
-.mini-post-img img{
-    height: 100%;
-}
-/* SECTION SIX mini blog */
 /* SECTION CONTACT */
 .contact{
-    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    /* box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3); */
+    /* box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5); */
+    box-shadow: var(--dark-shadow);
     border-radius: 0.3rem;
     padding: 2rem 4rem;
     margin: 0 1rem;
@@ -560,10 +513,11 @@ footer{
     justify-content: center;
     align-items: center;
     border-top: 1px solid rgb(70,70,70);
+    border-top: 1px solid var(--text-color);
+    background: var(--bkg-color);
+    /* background-color: rgb(50,50,50); */
 }
-footer h2{
-    color: white;
-}
+
 .footer-outer{
     width: 100vw;
     display: flex;
@@ -574,7 +528,8 @@ footer h2{
 }
 
 footer p{
-    color: rgb(0, 0, 0);
+    color: var(--text-color);
+    /* color: white; */
     margin: 1rem 0;
     font-size: 0.7rem;
 }
@@ -585,7 +540,7 @@ footer p{
     filter: invert(1);
 }
 .footer-inner a{
-    color: white;
+    /* color: white; */
 }
 
 .copywright{
@@ -600,7 +555,8 @@ footer p{
 .intro{
     width: 100vw;
     height: 100vh;
-    background: rgb(50,50,50);
+    /* background: rgb(50,50,50); */
+    background: var(--bkg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,21 +565,24 @@ footer p{
 .intro .text{
     width: 30vw;
     height: 75vh;
-    box-shadow: 2rem 0rem 1rem -1rem rgba(0, 0, 0, 0.5);
+    /* box-shadow: 2rem 0rem 1rem -1rem rgba(0, 0, 0, 0.5); */
     padding: 2rem;
-    margin-top: 10vh;
+    margin: 10vh 0 0 0;
     position: absolute;
     left: 0;
-    background-color: rgb(50,50,50);
+    border-radius: 0.4rem;
+    /* background-color: rgb(50,50,50); */
 }
 
 .intro .text h1{
-    color: white;
+    /* color: white; */
+    color: var(--text-color);
 }
 .intro .text p{
-    color: white;
+    /* color: white; */
     line-height: 2rem;
     text-align: justify;
+    color: var(--text-color)
 }
 
 .posts{
@@ -640,14 +599,20 @@ footer p{
 }
 
 .post{
-    width: 20rem; /* OVO IZ NEKOG RAZLOGA NE RADI. NIJE SIRINA 18REM NEGO IH STISNE. DRUGE JEDINICE NE POMAZU */
+    width: 20rem;
     height: 30rem;
     border-radius: 0.4rem;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    background-color:  rgb(50,50,50);
+    background-color: var(--bkg-color);
+    /* background-color: rgb(50,50,50); */
     margin: 1rem;
     flex-shrink: 0;
+}
+
+.invisible{
+    box-shadow: none;
+    opacity: 0;
 }
 
 .post-image{
@@ -669,19 +634,22 @@ footer p{
     color:rgba(70, 70, 70, 0.5);
     margin: 0;
     height: 1rem;
-    color: white;
+    /* color: white; */
+    color: var(--text-color);
 }
 
 .post-text h3{
     height: 2rem;
-    color: white;
+    /* color: white; */
+    color: var(--text-color);
 }
 
 .post-text p{
     font-size: 0.8rem;
     height: 8rem;
     line-height: 1.2rem;
-    color: white;
+    /* color: white; */
+    color: var(--text-color);
 }
 
 .read-more{
