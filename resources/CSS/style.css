@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
     color: var(--text-color);
-    /* color: white; */
+    
     box-sizing: border-box;
 }
 
@@ -20,6 +20,15 @@ body{
     --bkg-color: rgb(30,30,30);
     --dark-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5);
     --dim-picture: brightness(0.7);
+    --input-field: rgba(170,170,170);
+    --hover: brightness(1.1);
+}
+
+.light-theme{
+    --text-color: rgb(50,50,50);
+    --bkg-color: rgb(240,240,240);
+    --dark-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    --dim-picture: brightness(1);
     --input-field: rgba(170,170,170);
     --hover: brightness(1.1);
 }
@@ -76,6 +85,11 @@ i{
     display: none !important;
 }
 
+#theme i{
+  color: var(--text-color);
+  font-size: 1.5rem; 
+  transition: all 0.5s ease; 
+}
 @keyframes fadeout {
     0% {opacity: 1;}
     50% {opacity: 1;}
@@ -530,7 +544,7 @@ footer{
     align-items: center;
     border-top: 1px solid rgb(70,70,70);
     background: var(--bkg-color);
-    /* background-color: rgb(50,50,50); */
+    
 }
 
 .footer-outer{
@@ -544,7 +558,6 @@ footer{
 
 footer p{
     color: var(--text-color);
-    /* color: white; */
     margin: 1rem 0;
     font-size: 0.7rem;
 }
@@ -553,9 +566,6 @@ footer p{
     margin: 2rem;
     transition: all 0.2s ease;
     filter: invert(1);
-}
-.footer-inner a{
-    /* color: white; */
 }
 
 .copywright{
@@ -586,15 +596,15 @@ footer p{
     position: absolute;
     left: 0;
     border-radius: 0.4rem;
-    /* background-color: rgb(50,50,50); */
+    
 }
 
 .intro .text h1{
-    /* color: white; */
+    
     color: var(--text-color);
 }
 .intro .text p{
-    /* color: white; */
+    
     line-height: 2rem;
     text-align: justify;
     color: var(--text-color)
@@ -629,7 +639,6 @@ footer p{
 }
 
 .post:hover{
-    
     filter: var(--hover);
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
@@ -659,13 +668,13 @@ footer p{
     color:rgba(70, 70, 70, 0.5);
     margin: 0;
     height: 1rem;
-    /* color: white; */
+    
     color: var(--text-color);
 }
 
 .post-text h3{
     height: 2rem;
-    /* color: white; */
+    
     color: var(--text-color);
 }
 
@@ -673,7 +682,7 @@ footer p{
     font-size: 0.8rem;
     height: 8rem;
     line-height: 1.2rem;
-    /* color: white; */
+    
     color: var(--text-color);
 }
 
