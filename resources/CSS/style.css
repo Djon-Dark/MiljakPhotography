@@ -16,9 +16,12 @@ html{
 }
 
 body{
-    --text-color: rgb(240,240,240);
+    --text-color: rgb(230,230,230);
     --bkg-color: rgb(30,30,30);
     --dark-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5);
+    --dim-picture: brightness(0.7);
+    --input-field: rgba(170,170,170);
+    --hover: brightness(1.1);
 }
 
 p{
@@ -212,7 +215,6 @@ width: 100%;
     min-height: 100vh;
     padding: 3rem 0;
     background: var(--bkg-color);
-    /* background-color: rgb(50,50,50); */
     position: relative;
     z-index: 3;
     display: flex;
@@ -228,6 +230,7 @@ width: 100%;
     width: 100vw;
     position: relative;
     z-index: 2;
+    filter: var(--dim-picture);
 }
 
 .ioscarousell{
@@ -308,6 +311,7 @@ width: 100%;
     border-radius: 0.4rem;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     margin: 0 1rem;
+    filter: var(--dim-picture);
 }
 
 .text{
@@ -343,6 +347,7 @@ width: 100%;
     border-radius: 0.3rem;
     background: url('../images/curanakrevetu.jpg') center/cover;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    filter: var(--dim-picture);
 }
 
 .photo-food{
@@ -350,12 +355,14 @@ width: 100%;
     border-radius: 0.3rem;
     background: url('../images/hrana.jpg') center/cover;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    filter: var(--dim-picture);
 }
 .photo-luxury{
     height: 15rem;
     border-radius: 0.3rem;
     background: url('../images/luksuz.jpg') center/cover;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    filter: var(--dim-picture);
 }
 /* SECTION THREE types of photos */
 /* SECTION FOUR help you */
@@ -391,14 +398,23 @@ width: 100%;
     align-items: center;
     justify-content: space-evenly;
 }
+
+.references-container{
+    width: 100vw;
+    overflow: scroll;
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+
 .reference{
     text-align: center;
-    width: 90%;
+    width: 100%;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 90vw;
+    scroll-snap-align: center;
 }
 .reference-text{
     margin: 2rem 0;
@@ -446,20 +462,18 @@ input{
     height: 2rem;
     border: none;
     outline: none;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--input-field);
     margin-bottom: 1rem;
     padding-left: 1rem;
     font: inherit;
     border-radius: 0.2rem;
     transition: all 0.3s ease;
 }
-input:hover{
-    background-color:  rgba(170, 170, 170);
-}
+
 textarea{
     border: none;
     outline: none;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--input-field);
     resize: none;
     padding: 1rem;
     box-sizing: border-box;
@@ -467,8 +481,10 @@ textarea{
     font: inherit;
     transition: all 0.3s ease;
 }
+
+input:hover,
 textarea:hover{
-    background-color:  rgba(170, 170, 170);
+    background-color:  rgba(220,220,220);
 }
 .contact-form button{
     width: 10rem;
@@ -513,7 +529,6 @@ footer{
     justify-content: center;
     align-items: center;
     border-top: 1px solid rgb(70,70,70);
-    border-top: 1px solid var(--text-color);
     background: var(--bkg-color);
     /* background-color: rgb(50,50,50); */
 }
@@ -596,6 +611,8 @@ footer p{
     margin-top: 10vh;
     margin-left: 30vw;
     padding-left: 3rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1rem;
 }
 
 .post{
@@ -605,9 +622,16 @@ footer p{
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     overflow: hidden;
     background-color: var(--bkg-color);
-    /* background-color: rgb(50,50,50); */
     margin: 1rem;
     flex-shrink: 0;
+    scroll-snap-align: start;
+    transition: all 0.2s ease;
+}
+
+.post:hover{
+    
+    filter: var(--hover);
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .invisible{
@@ -618,6 +642,7 @@ footer p{
 .post-image{
     height: 40%;
     overflow: hidden;
+    filter: var(--dim-picture);
 }
 
 .post-image img{
