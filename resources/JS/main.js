@@ -76,7 +76,6 @@ const carousellBackground = ()=>{
         switch (i) {
             case 1: 
                 one.style.background = "url('resources/images/curanakrevetu.jpg') bottom/cover";
-                slogan.style.textShadow= "0 0 1rem rgba(70, 70, 70, 0.5)";
                 break;
             case 2: 
                 one.style.background = "url('resources/images/dorucak.jpg') bottom/cover";    
