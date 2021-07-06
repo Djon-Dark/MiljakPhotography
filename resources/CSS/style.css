@@ -639,7 +639,6 @@ footer p{
 }
 
 .post:hover{
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
 }
 
@@ -691,7 +690,49 @@ footer p{
     font-size: 1rem;
     color: orange;
 }
-/* BLOG */
+
+/* GALLERY */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.gallery .item{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    filter:brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.gallery .item:hover{
+    filter: brightness(1);
+    transform: scale(1.01);
+}
+
+.gallery .item img{
+    height: 100%;
+}
+
+.expand{
+    transform: scale(2)!important;
+    position: relative;
+}
+
+.overflow{
+    overflow: visible !important;
+}
+
+.position{
+    z-index: 2;
+}
+
 
 @media screen and (max-width:768px){
     header{
