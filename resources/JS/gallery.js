@@ -1,18 +1,32 @@
 const items = document.querySelectorAll('.item');
-//const galleryImage = document.querySelectorAll('.gallery-image');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.close-modal');
+const fullsizeImg = document.querySelector('.fullsize-img');
 
+// Open modal
 items.forEach(item => {
     item.addEventListener('click',()=>{
-        item.classList.toggle('expand');
+        body.classList.add('scroll-disabled');
+        modal.style.top = window.scrollY + 'px';
+        modal.classList.remove('disable');
         setTimeout(() => {
-            item.classList.toggle('overflow');
+          modal.classList.remove('hide');  
         }, 50);
-        if(item.classList.contains('position')){
-            setTimeout(() => {
-                item.classList.toggle('position')
-            }, 300);
-            return;
-        }
-        item.classList.toggle('position');
+
+        // show clicked image in fullsize
+        let clickedImage = item.firstElementChild;
+        fullsizeImg.src = clickedImage.src;
     })
 });
+
+
+// Close modal
+closeModal.addEventListener('click',()=>{
+    modal.classList.add('hide');
+    body.classList.remove('scroll-disabled');
+    setTimeout(() => {
+        modal.classList.add('disable');
+    }, 200);
+})
+
+
