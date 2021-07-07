@@ -752,12 +752,12 @@ footer p{
     max-height: 90%;
 }
 
-.prev-next{
+.modal .btn{
     font-size: 3rem;
     opacity: 0.8;
 }
 
-.prev-next:hover{
+.modal .btn:hover{
     opacity: 1;
 }
 
