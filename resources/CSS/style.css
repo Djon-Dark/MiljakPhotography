@@ -744,7 +744,7 @@ footer p{
     transition: all 0.2s ease;
     position: absolute;
     left: 0;
-    z-index: 3;
+    z-index: 4;
 }
 
 .modal img{
@@ -763,7 +763,7 @@ footer p{
 
 .close-modal{
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     top: 2rem;
     right: 2rem;
     font-size: 2rem;
