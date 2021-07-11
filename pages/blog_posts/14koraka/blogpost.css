@@ -1,15 +1,20 @@
 *{
-    color: rgba(70, 70, 70);
-}
-header{
-    position: static;
-    background: rgb(30,30,30);
-    opacity: 1;
+    color: var(--text-color);
 }
 
-.section{
-    z-index: 0;
+body{
+    background-color: var(--bkg-color);
 }
+
+.blue{
+    color: rgb(102, 186, 255);
+}
+
+.intro{
+    background: none;
+    padding: 0;
+}
+
 .italic{
     font-style: italic;
 }
@@ -21,18 +26,20 @@ header{
 .wholerow{
     display: block;
 }
-.splash-background{
-    width: 50rem;
-    height: 30rem;
-    background: url(../../../resources/images/sobarica2.jpg) center/cover;
+
+.blog-post{
+    margin-top: 15vh;
+    width: 100vw;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
 .post-date{
     color: #CEA668;
     margin-top: 2rem;
 }
+
 .splash-text{
     max-width: 50rem;
     padding: 1rem;
@@ -42,12 +49,14 @@ header{
     transition: all 0.3s ease;
     text-align: center;
 }
-.blog-post{
-    width: 100vw;
+
+.splash-background{
+    width: 50rem;
+    height: 30rem;
+    background: url(../../../resources/images/sobarica2.jpg) center/cover;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .landing-image{
@@ -106,8 +115,9 @@ header{
     padding: 2rem;
     margin: 4rem 0;
     border-radius: 1rem;
-    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    box-shadow: var(--dark-shadow);
 }
+
 .summary h2{
     margin-top: 0;
     border-bottom: 1px solid rgb(102, 186, 255);
@@ -116,9 +126,6 @@ header{
 .summary p{
     margin-bottom: 1rem;
 }
-
-
-
 
 @media screen and (max-width:500px)  {
     .splash-background{
