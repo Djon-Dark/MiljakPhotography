@@ -70,6 +70,15 @@ i{
     color: white;
 }
 
+.italic{
+    font-style: italic;
+}
+
+.caption{
+    font-size: 0.7rem;
+    padding: 0 1rem;
+}
+
 .scroll-disabled{
     overflow: hidden;
 }

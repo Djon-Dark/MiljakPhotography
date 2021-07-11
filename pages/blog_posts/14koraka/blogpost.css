@@ -73,6 +73,7 @@ body{
     max-width: 50rem;
 }
 
+/* POST SPECIFIC */
 .step{
     display: flex;
     align-items: flex-start;
@@ -104,6 +105,7 @@ body{
 .reverse img{
     float: right;
 }
+/* POST SPECIFIC */
 
 .closing-words{
     max-width: 50rem;

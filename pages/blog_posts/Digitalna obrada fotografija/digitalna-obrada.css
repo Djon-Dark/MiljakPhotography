@@ -1,48 +1,39 @@
-/* -------------------- COMMON STYLE ------------------------ */
 *{
-    color: rgba(70, 70, 70);
+    color: var(--text-color);
 }
-.section{
-    z-index: 0;
+
+body{
+    background-color: var(--bkg-color);
 }
-p{
-    margin: 1rem 0;
+
+
+
+.blue{
+    color: rgb(102, 186, 255);
 }
-.italic{
-    font-style: italic;
+
+.intro{
+    background: none;
+    padding: 0;
 }
-.caption{
-    font-size: 0.7rem;
-    padding: 0 1rem;
-}
+
 .wholerow{
     display: block;
 }
 
-main{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 50vh;
-    background-color: white;
-    gap: 2rem;
-}
-header{
-    position: static;
-    background: rgb(30,30,30);
-    opacity: 1;
-}
 .blog-post{
-    max-width: 70rem;
+    margin-top: 15vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
 }
+
 .post-date{
     color: #CEA668;
     margin-top: 2rem;
 }
+
 .splash-text{
     max-width: 50rem;
     padding: 1rem;
@@ -53,24 +44,30 @@ header{
     text-align: center;
 }
 .splash-background{
-    width: 48rem;
+    width: 50rem;
     height: 30rem;
     background: url(../../../resources/images/soba2.jpg) center/cover;
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
-.post-text{
+
+.blog-post .intro{
+    max-width: 50rem;
+}
+
+.blog-post-text{
     max-width: 50rem;
     padding: 1rem;
 }
-.post-text ul {
+.blog-post-text ul {
     list-style-position: outside;
     list-style-type: circle;
 }
-.post-text li{
+.blog-post-text li{
     margin: 0.5rem 2rem;
 }
+
 .closing-words{
     max-width: 50rem;
     margin: 2rem 0;
@@ -89,6 +86,7 @@ header{
 .summary p{
     margin-bottom: 1rem;
 }
+
 .still-image{
     max-width: 50rem;
     overflow: hidden;

@@ -6,23 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miljak Photography</title>
     <link rel="stylesheet" href="../../../resources/CSS/style.css">
-    <link rel="stylesheet" href="../../../resources/CSS/blog.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./digitalna-obrada.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 <body>
     <header>
+        <div class="social" id="social-desktop-header">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <a href="./index.html" class="logo">                
+            <h3>Miljak Photography</h3>
+            <p>- hotel - food - experience - lifestyle -</p> 
+        </a>
         <ul class='navbar'>
             <li class='navlink'>
-                <a href="../../../index.html">
-                    <div>Miljak Photography</div>
+                <a href="#contact">
+                    <div>kontakt</div>
                 </a>
             </li>
             <li class='navlink'>
-                <a href="../../blog.html">
+                <a href="../../../gallery.html">
+                    <div>galerija</div>
+                </a>
+            </li>
+            <li class='navlink'>
+                <a href="../../../blog.html">
                     <div>blog</div>
                 </a>
+            </li>
+            <li class='navlink' id="social-mobile-header">
+                <div class="social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </li>
         </ul>
         <div class="burger">
@@ -39,7 +63,7 @@
                 <p class='intro'>U ovom blogu ću odgovoriti na jedno od pitanja koje najčešće čujem – ''Kako obrađuješ fotografije'', te vam približiti neke tajne i korake koje koristim pri digitalnoj obradi?</p>
             </div>
             <div class="splash-background"></div>
-            <div class="post-text">
+            <div class="blog-post-text">
                 <p>Danas gotovo ne postoji grana industrije u kojoj ne postoji zahtjev za digitalnom obradom fotografija. Potrebno je zadovoljiti brojne kriterije kako bi stvorili fotografiju koja će dobiti priliku postati najbolja reklama vašeg objekta. Puno puta sam čuo iskustva ljudi koji su pokušali sami fotografirati svoje interijere te na taj način shvatili koliko je teško stvoriti fotografiju kao iz magazina.</p>
                 <p class='italic'>„Kvalitetna fotografija je temelj uspješnog poslovanja“</p>
                 <p>Osnovni zadatak komercijalne fotografije je kvalitetno prezentirati proizvod ili uslugu. Tu je stvar jednostavna, ako fotografija nije dovoljno dobra neće postojati interes za tim proizvodom ili uslugom. Ključno je pridobiti pažnju osobe koja pregledava sadržaj te stvoriti interes za daljnje istraživanje vaše ponude. Gotovo uvijek imate samo jednu šansu te se iz toga izvlači zaključak kako je danas kvalitetna fotografija temelj uspješnog poslovanja.</p>
@@ -124,74 +148,52 @@
                 </div>
             </div>
         </div>
-        <div class="section six mini-blog" id='six'>
-            <h1 class='centered fullwidth'>Besplatni savjeti</h1>
-            <div class="outer-container">
-                <div class="mini-post">
-                    <a href="../14koraka/14_koraka_za_uspjesnu_pripremu.html">
-                        <div class="mini-post-img">
-                            <img src="../../../resources/images/sobarica2.jpg" alt="">
-                        </div>
-                        <div class="mini-post-txt">
-                            <h2>14 koraka za uspješnu pripremu</h2>
-                            <p>04.05.2021.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mini-post">
-                    <a href="../Digitalna obrada fotografija/Digitalna obrada fotografija.html">
-                        <div class="mini-post-img">
-                            <img src="../../../resources/images/zalazak2.jpg" alt="">
-                        </div>
-                        <div class="mini-post-txt">
-                            <h2>Digitalna obrada fotografije</h2>
-                            <p>04.05.2021.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mini-post">
-                    <a href="./pages/blog.html">
-                        <div class="mini-post-img">
-                            <img src="../../../resources/images/recepcija1.jpg" alt="">
-                        </div>
-                        <div class="mini-post-txt">
-                            <h2>Peljar za paparazze</h2>
-                            <p>04.05.2021.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mini-post">
-                    <a href="./pages/blog.html">
-                        <div class="mini-post-img">
-                            <img src="../../../resources/images/ljuljacka.jpg" alt="">
-                        </div>
-                        <div class="mini-post-txt">
-                            <h2>7 koraka za manje uspjesnu pripremu</h2>
-                            <p>04.05.2021.</p>
-                        </div>
-                    </a>
+        <div class="section">
+            <div class='contact' id="contact">
+                <h1 class="centered">Javite mi se, rado ću odgovoriti na sva Vaša pitanja!</h1>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form action="none" id='form-one'>
+                            <label for="name">Vaše cjenjeno ime:</label>
+                            <input type="text" id='name'>
+                            <label for="email">Vaša e-mail adresa:</label>
+                            <input type="text" id='email'>
+                            <label for="message">Poruka:</label>
+                            <textarea form='form-one' id='message' rows="5" cols="20"></textarea>
+                            <button type='submit'>Pošalji</button>
+                        </form>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class='centered'>Dostupan sam putem e-maila, whatsappa, te na društvenim mrežama</h3>
+                        <p>
+                            <b>e-mail:</b> ivan.miljak@hotmail.com
+                        </p>
+                        <p>
+                            <b>tel: </b>  <a href="tel:00385987654321">+385 98 7654321</a>
+                        </p>
+                        <p>
+                            <div class="social">
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <h2 class='centered fullwidth'>Dostupan sam putem e-maila, whatsappa, te na društvenim mrežama</h2>
-        <div class="footer-outer">
-            <div class="footer-inner mail">ivan.miljak@hotmail.com</div>
-            <div class="footer-inner social">
-                <a href="#"><img src="../../../resources/images/SVG/facebook.svg" alt=""></a>
-                <a href="#"><img src="../../../resources/images/SVG/instagram.svg" alt=""></a>       
-            </div>
-            <div class="footer-inner tel"><a href="tel:00385987654321">+385 98 7654321</a></div>
-        </div>
+    <footer >
         <div class='footer-outer'>
             <div class="footer-inner copywright">
                 <p>© 2021 Miljak Photography</p>
+                <p id="theme"><i class="fas fa-toggle-off"></i></p>
                 <p>web by: MrakSolutions</p> 
             </div>
         </div>
     </footer>
 </body>
 <script type='module' src="../../../resources/JS/navbarAnimation.js"></script>
+<script src="../../../resources/JS/themeToggle.js"></script>
 <script src="./imageComparator.js"></script>
 </html>
