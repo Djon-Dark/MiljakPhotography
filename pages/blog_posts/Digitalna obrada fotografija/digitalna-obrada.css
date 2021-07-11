@@ -2,11 +2,17 @@
     color: var(--text-color);
 }
 
+p{
+    line-height: 1.5rem;
+}
+
+li{
+    line-height: 1.5rem;
+}
+
 body{
     background-color: var(--bkg-color);
 }
-
-
 
 .blue{
     color: rgb(102, 186, 255);
@@ -15,6 +21,15 @@ body{
 .intro{
     background: none;
     padding: 0;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.caption{
+    font-size: 0.7rem;
+    padding: 0 1rem;
 }
 
 .wholerow{
@@ -43,6 +58,7 @@ body{
     transition: all 0.3s ease;
     text-align: center;
 }
+
 .splash-background{
     width: 50rem;
     height: 30rem;
@@ -60,10 +76,12 @@ body{
     max-width: 50rem;
     padding: 1rem;
 }
+
 .blog-post-text ul {
     list-style-position: outside;
     list-style-type: circle;
 }
+
 .blog-post-text li{
     margin: 0.5rem 2rem;
 }
@@ -73,16 +91,19 @@ body{
     margin: 2rem 0;
     padding: 1rem;
 }
+
 .summary{
     padding: 2rem;
     margin: 4rem 0;
     border-radius: 1rem;
-    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    box-shadow: var(--dark-shadow);
 }
+
 .summary h2{
     margin-top: 0;
     border-bottom: 1px solid rgb(102, 186, 255)
 }
+
 .summary p{
     margin-bottom: 1rem;
 }
@@ -95,70 +116,13 @@ body{
     justify-content: center;
     align-items: center;
     margin: 3rem auto;
-    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    box-shadow: var(--dark-shadow);
     border-radius: 0.4rem;
 }
+
 .still-image img{
     width: 100%;
 }
-
-/* SECTION SIX micro blog */
-.micro-blog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 1rem;
-    max-width: 30rem;
-}
-.micro-blog h4{
-    margin: 1rem;
-    border-bottom: 1px solid rgb(30,30,30);
-}
-.micro-blog h2{
-    width: 100%;
-}
-.micro-blog .outer-container{
-    display: flex;
-    flex-direction: column;
-}
-.micro-post{
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    width: 20rem;
-    transition: all 0.3s ease;
-}
-.micro-post a{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.micro-post:hover{
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
-    transform:scale(1.05);
-}
-.micro-post-img{
-    width: 7rem;
-    height: 7rem;
-    overflow: hidden;
-}
-.micro-post-txt{
-    text-align: center;    
-    width: 11rem;
-    padding-right: 2rem;
-
-}
-.micro-post-date{
-    color: rgb(206, 166, 104);
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.micro-post-img img{
-    height: 100%;
-}
-/* SECTION SIX micro blog */
 
 /* -------------------- COMMON STYLE ---------------------- */
 
@@ -171,7 +135,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 3rem auto;
-    box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+    box-shadow: var(--dark-shadow);
     border-radius: 0.4rem;
 }
 
@@ -214,7 +178,6 @@ body{
 /* image comparator */
 
 
-/* -------------------- COMMON MEDIA QUERY ---------------------- */
 
 @media screen and (max-width: 50rem){
     *:hover{
@@ -243,7 +206,7 @@ body{
     }
     .micro-post{
         margin: 1rem;
-        box-shadow: 0 0.2rem 2rem rgba(70, 70, 70, 0.3);
+        box-shadow: var(--dark-shadow);
         border-radius: 0.4rem;
         overflow: hidden;
     }

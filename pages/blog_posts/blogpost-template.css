@@ -62,7 +62,7 @@ body{
 .splash-background{
     width: 50rem;
     height: 30rem;
-    background: url(../../../resources/images/sobarica2.jpg) center/cover;
+    background: url(../../../resources/images/soba2.jpg) center/cover;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -86,40 +86,6 @@ body{
     margin: 0.5rem 2rem;
 }
 
-/* -------------------- POST SPECIFIC -------------------- */
-.step{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 2rem 1rem;
-    max-width: 50rem;
-    border-bottom: 1px solid gray;
-}
-
-.step-text h2{
-    margin-top: 0;
-}
-
-.column{
-    flex-direction: column;
-}
-
-.reverse{
-    flex-direction: row-reverse;
-}
-
-.step img{
-    float: left;
-    height: 7rem;
-    width: 7rem;
-    margin: 0 1rem;
-}
-
-.reverse img{
-    float: right;
-}
-/* -------------------- POST SPECIFIC -------------------- */
-
 .closing-words{
     max-width: 50rem;
     margin: 2rem 0;
@@ -135,26 +101,25 @@ body{
 
 .summary h2{
     margin-top: 0;
-    border-bottom: 1px solid rgb(102, 186, 255);
+    border-bottom: 1px solid rgb(102, 186, 255)
 }
 
 .summary p{
     margin-bottom: 1rem;
 }
 
-@media screen and (max-width:500px)  {
-    .splash-background{
-        width: 100vw;
-    }
-    .step{
-        padding: 1rem;
-    }
-    .step-image img{
-        height: 5rem;
-        width: 5rem;
-        margin-left: 0;
-    }
-    .summary{
-        padding: 1.5rem;
-    }
+.still-image{
+    max-width: 50rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    box-shadow: var(--dark-shadow);
+    border-radius: 0.4rem;
+}
+
+.still-image img{
+    width: 100%;
 }
