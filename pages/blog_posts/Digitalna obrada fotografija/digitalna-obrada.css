@@ -51,12 +51,15 @@ body{
 
 .splash-text{
     max-width: 50rem;
-    padding: 1rem;
     padding-bottom: 2rem;
     color: white;
     text-shadow: 0 1px 2px rgb(59, 59, 59,0.5), 0 0 1px rgb(59, 59, 59,0.5);
     transition: all 0.3s ease;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .splash-background{
@@ -69,6 +72,7 @@ body{
 }
 
 .blog-post .intro{
+    width: 90%;
     max-width: 50rem;
 }
 
@@ -156,7 +160,9 @@ body{
   
   .img-comp-img img {
     display: block;
-    vertical-align: middle;
+    position: relative;
+    bottom: 0;
+    /* vertical-align: bottom; */
     height: 30rem;
     width: 50rem;
   }
@@ -180,12 +186,6 @@ body{
 
 
 @media screen and (max-width: 50rem){
-    *:hover{
-        box-shadow: none;
-    }
-    main{
-        margin-bottom: 100vh;
-    }
     .blog-post{
         width: 100vw;
     }
@@ -194,7 +194,7 @@ body{
     }
     .compare-img{
         width: 90vw;
-        height: 70vw;
+        height: auto;
     }
     .img-comp-container {
         width: 90vw;
