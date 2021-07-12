@@ -15,9 +15,10 @@ const two = document.querySelector('.two');
 const footer = document.querySelector('footer');
 
 //STATUS MESSAGES:
-console.log(' STATUS: blog / galerija trebaju ostati selektirani u navbaru ako su otvoreni');
-console.log(' STATUS: klik na link sa bloga na index loada pocetnu animaciju');
 console.log(' STATUS: Na iOS workaround srediti poziciju slika');
+console.log(' STATUS: Na iPad KAKO MOGU POMOCI VAMA gap nije podrzan za flex, napravi fallback');
+console.log(' STATUS: Na iPad portrait mode logo zaljepljen za vrh, a linkovi budu na sredini navbara');
+console.log(' STATUS: Na iPad prvi image carousell se valjda loada u obje verzije?');
 /*
 //whiteout - load animation
 window.addEventListener('load',()=>{
@@ -64,7 +65,7 @@ window.addEventListener('load',()=>{
 preloader();
 //
 */
-let isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+let isApple = /iPhone|iPod/i.test(navigator.userAgent);
 
 //main image carousell
 const carousellBackground = ()=>{
