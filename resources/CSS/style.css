@@ -16,7 +16,7 @@ html{
 
 body{
     --text-color: rgb(230,230,230);
-    --bkg-color: #151515;
+    --bkg-color: #202020;
     --dark-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5);
     --dim-picture: brightness(0.8);
     --input-field: rgba(170,170,170);
