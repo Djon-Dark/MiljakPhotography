@@ -147,7 +147,6 @@ header{
 .logo{
     text-align: center;
     position: absolute;
-    /*top: 1rem;*/
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -254,10 +253,6 @@ header{
     filter: var(--dim-picture);
 }
 
-.ioscarousell{
-    display: none;
-}
-
     /* slogan */
 .whiteout{
     width: 100vw;
@@ -315,6 +310,25 @@ header{
     color: white;
 }
 
+/* 'background' carousell */
+.background-slideshow{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.background-slide{
+    width: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
 /* SECTION TWO about and contact form */
 .about{
@@ -888,23 +902,26 @@ footer p{
         justify-content: flex-start;
         align-items: center;
     }
-    /* IOS WORKAROUND FOR BACKGROUND ATTACHMENT FIXED +++++++++++++++++++*/
-    .ioscarousell{
-        height: 60rem;
-        width: 100%;
+
+    /* 'background' carousell */
+    .background-slideshow{
+        height: 100vh;
+        width: 100vw;
         position: absolute;
         top: 0;
+        left: 0;
         overflow: hidden;
     }
-    .iosbackground{
-        width: 300%;
+
+    .background-slide{
+        width: auto;
+        height: 100%;
         opacity: 0;
         transition: all 1s ease;
         position: absolute;
-        top: 0;
+        left: 0;
         right: 0;
     }
-    /* IOS WORKAROUND FOR BACKGROUND ATTACHMENT FIXED +++++++++++++++++++*/
     
     .text{
         padding: 0 1rem;
