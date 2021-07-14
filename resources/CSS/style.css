@@ -51,6 +51,7 @@ h3{
 
 .centered{
     text-align: center;
+    padding: 0 0.5rem;
 }
 
 .fullwidth{
@@ -154,6 +155,7 @@ header{
 
 .logo h3{
     font-family: 'Caveat', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: white;
     margin: 0;
@@ -333,7 +335,7 @@ header{
 /* SECTION TWO about and contact form */
 .about{
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -638,6 +640,7 @@ footer p{
 .intro .text h1{
     color: rgb(255, 255, 255);
     font-family: 'Caveat', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 5rem;
 }
 
