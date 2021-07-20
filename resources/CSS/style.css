@@ -20,6 +20,14 @@ body{
     --dark-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.5);
     --dim-picture: brightness(0.8);
     --input-field: rgba(170,170,170);
+    /*--logofont: 'Playfair Display', serif;*/
+    /*--logofont: 'Aleo', serif;*/
+    /*--logofont: 'Cormorant Garamond', serif;*/
+    --logofont: 'Cormorant Infant', serif;
+    --logofont: 'Cormorant SC', serif;
+    /*--logofont: 'Merriweather', serif;
+    /*--logofont: 'Nanum Myeongjo', serif;*/
+    /*--logofont: 'ZCOOL XiaoWei', serif;*/
 }
 
 .light-theme{
@@ -35,8 +43,10 @@ p{
 }
 
 h1{
-    font-weight: 400;
+    font-weight: 300;
     margin: 1rem 0;
+    font-family: var(--logofont);
+    font-size: 2.5rem;
 }
 
 h2{
@@ -46,7 +56,7 @@ h2{
 
 h3{
     margin: 1rem 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .centered{
@@ -154,11 +164,11 @@ header{
 }
 
 .logo h3{
-    font-family: 'Caveat', cursive;
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-family: var(--logofont);
+    font-size: 2.1rem;
     color: white;
     margin: 0;
+    font-weight: 300;
 }
 
 .logo p{
@@ -175,6 +185,8 @@ header{
 
 .navbar li{
     margin: 0 1rem;
+    font-size: 1.1rem;
+    font-family: var(--logofont);
 }
 
 .navbar li::after {
@@ -213,14 +225,14 @@ header{
 
 .burger div{
     width: 30px;
-    height: 3px;
+    height: 1px;
     background-color: rgb(255, 255, 255);
     transition: all 0.3s ease;
     border-radius: 3px;
 }
 
 .toggle .line1{    
-    transform: rotate(-45deg) translate(-3px,9px);
+    transform: rotate(-45deg) translate(-4px,9px);
 }
 
 .toggle .line2{    
@@ -228,7 +240,7 @@ header{
 }
 
 .toggle .line3{    
-    transform: rotate(45deg) translate(-3px,-9px);
+    transform: rotate(45deg) translate(-4px,-9px);
 }
 
 /* MAIN PART */
@@ -267,14 +279,14 @@ header{
     align-items: center;
     justify-content: center;
     /* preload images for carousell */
-    background: linear-gradient(to bottom, var(--bkg-color),var(--bkg-color)), url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover;
+    background: linear-gradient(to bottom, var(--bkg-color),var(--bkg-color))/*, url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover*/;
     transition: all 2s ease-in-out;
 }
 
 .whiteout h1{
     font-size: 3rem;
-    font-family: 'Caveat', cursive;
-    color: #101010;
+    font-family: var(--logofont);
+    color: #151515;
 }
 
 .whiteout img{
@@ -585,6 +597,7 @@ footer p{
     margin: 1rem 0;
     font-size: 0.7rem;
 }
+
 .footer-inner img{
     height: 2rem;
     margin: 2rem;
@@ -639,8 +652,7 @@ footer p{
 
 .intro .text h1{
     color: rgb(255, 255, 255);
-    font-family: 'Caveat', cursive;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--logofont);
     font-size: 5rem;
 }
 
@@ -818,6 +830,7 @@ footer p{
         background-color: rgba(70, 70, 70, 0);
         box-shadow: none;
     }
+
     @keyframes mobilenavlinks {
         0%{
             opacity: 0;
@@ -859,6 +872,7 @@ footer p{
     }
 
     .navbar li{
+        font-size: 2.5rem;
         margin: 1rem 0;
         opacity: 0;
         animation: mobilenavlinks 500ms ease forwards;
@@ -963,6 +977,15 @@ footer p{
 }
 
 @media screen and (max-width:500px){
+    .logo h3{
+        line-height: 1.9rem;
+        margin: 0.5rem;
+    }
+
+    .intro .text h1{
+        font-size: 3rem;
+    }
+
         /* BLOG */
     .intro{
         background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bkg-color)), url('../images/background_blog_ios.jpg');
@@ -993,3 +1016,4 @@ footer p{
         max-width: 100%;
     }
 }
+
