@@ -23,8 +23,10 @@ body{
     /*--logofont: 'Playfair Display', serif;*/
     /*--logofont: 'Aleo', serif;*/
     /*--logofont: 'Cormorant Garamond', serif;*/
+    /*
     --logofont: 'Cormorant Infant', serif;
     --logofont: 'Cormorant SC', serif;
+    */
     /*--logofont: 'Merriweather', serif;
     /*--logofont: 'Nanum Myeongjo', serif;*/
     /*--logofont: 'ZCOOL XiaoWei', serif;*/
@@ -45,8 +47,10 @@ p{
 h1{
     font-weight: 300;
     margin: 1rem 0;
+    /*
     font-family: var(--logofont);
     font-size: 2.5rem;
+    */
 }
 
 h2{
@@ -185,8 +189,10 @@ header{
 
 .navbar li{
     margin: 0 1rem;
+    /*
     font-size: 1.1rem;
     font-family: var(--logofont);
+    */
 }
 
 .navbar li::after {
@@ -350,7 +356,6 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
 }
 
 .about img{
@@ -872,7 +877,9 @@ footer p{
     }
 
     .navbar li{
+        /*
         font-size: 2.5rem;
+        */
         margin: 1rem 0;
         opacity: 0;
         animation: mobilenavlinks 500ms ease forwards;
