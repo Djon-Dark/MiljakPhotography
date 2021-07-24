@@ -632,19 +632,34 @@ footer p{
 /* FOOTER */
 
 /* BLOG */
+.background-hack{
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bkg-color)), url('../images/camera-background\ copy.jpg') center/cover;*/
+    background: url('../images/camera-background\ copy.jpg') center/cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 0;
+    filter: opacity(0.5);
+}
+
 .intro{
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bkg-color)), url('../images/william-thomas-ny6tO4ItOEY-unsplash.jpeg') center/cover;
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bkg-color)), url('../images/camera-background\ copy.png');*/
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), var(--bkg-color)), url('../images/camera-background-fade.png');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-color: var(--bkg-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 15vh;
-
+    /*
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    */
 }
 
 #bg{
@@ -762,7 +777,7 @@ footer p{
 }
 
 .gallery-group{
-    width:90vw;
+    width:100vw;
     display: flex;
     overflow: scroll;
 }
@@ -893,9 +908,6 @@ footer p{
     }
 
     .navbar li{
-        /*
-        font-size: 2.5rem;
-        */
         margin: 1rem 0;
         opacity: 0;
         animation: mobilenavlinks 500ms ease forwards;
@@ -1012,17 +1024,24 @@ footer p{
         /* BLOG */
     .intro{
         background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bkg-color)), url('../images/background_blog_ios.jpg');
+        background-size: auto 100vh;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-color: var(--bkg-color);
     }
 
         /* GALLERY */
     .gallery{
+        /*
         flex-direction: column;
         overflow: scroll;
         height: 35rem;
         width: 100vw;
         padding-left: 1rem;
+        */
+    }
+
+    .gallery-group{
+        width: 100vw;
     }
 
     .gallery .item{
