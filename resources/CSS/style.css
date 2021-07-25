@@ -285,7 +285,7 @@ header{
     align-items: center;
     justify-content: center;
     /* preload images for carousell */
-    background: linear-gradient(to bottom, var(--bkg-color),var(--bkg-color))/*, url("../images/curanakrevetu.jpg"), url("../images/dorucak.jpg"), url("../images/wellness2.jpg"), url("../images/terasa.jpg"), url("../images/zalazak2.jpg") bottom/cover*/;
+    background: linear-gradient(to bottom, var(--bkg-color),var(--bkg-color));
     transition: all 2s ease-in-out;
 }
 
@@ -645,7 +645,7 @@ footer p{
 .intro{
     width: 100vw;
     /*background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bkg-color)), url('../images/camera-background\ copy.png');*/
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), var(--bkg-color)), url('../images/camera-background-fade.png');
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), var(--bkg-color)), url('../images/camera-background-fade.png');
     background-size: 100vw auto;
     background-repeat: no-repeat;
     background-color: var(--bkg-color);
