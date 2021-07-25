@@ -15,11 +15,12 @@ window.addEventListener('load',()=>{
     }, 2500);
     setTimeout(() => {
         whiteout.classList.add('hide');
-        slogan.classList.add('move-back');
+        
     }, 4500);
     setTimeout(() => {
         whiteout.classList.add('disable');
         body.classList.remove('scroll-disabled');
+		slogan.classList.add('move-back');
     }, 7000);
 })
 //
